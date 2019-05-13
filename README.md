@@ -29,6 +29,75 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 ## API Documentation
 (a list of server routes, structure of requests, structure of responses)
 
+```
+New Vendor Account
+app.post('/vendor/register', (request, response) => {
+    //vendor enters email and password to create new account
+})
+
+Vendor Login
+app.get('/vendor/login/:username', (request, response) => {
+    //vendor enters username and password
+    //credentials are checked and they are allowed access if password is correct
+    //user is given a temporary login token
+})
+
+New User Account
+app.post('/user/register', (request, response) => {
+    //user enters email and password to create new account
+})
+
+User Login
+app.get('/user/login/:username', (request, response) => {
+    //user enters username and password
+    //credentials are checked and they are brought to their profile if correct
+    //user is given a temporary login token
+})
+
+New Product List
+app.post('/vendor/:username/products', (request, response) => {
+    //creates appropriate database entries for products associated with that vendor    
+})
+
+Update Vendor Product Database
+app.put('/vendor/:username/products', (request, response) => {
+    //updates the vendor's database entries
+})
+
+Search For Particular Vendor Information
+app.get('/vendorlist/:name', (request, response) => {
+    //search for vendor using .findOne() and filtering by name    
+    //returns the user schedule, location, and products sold
+})
+
+Search For Vendor By Filters
+app.get('/vendorlist/??? ', (request, response) => {
+    //search for vendors by products sold, schedule, etc.
+    //this would use .findAll() and filter by user input using WHERE {}
+})
+
+Update Vendor Schedule
+app.put('/vendor/:username/schedule'), (request, response) => { 
+    //makes changes to the vendors schedule (only accessible if they have the login token)
+})
+
+Update User's Favorites 
+app.put('/user/:username/favorites', (request, response) => {
+    //updates the user's favorites
+})
+
+Delete Vendor Account
+app.delete('/vendor/:username', (request, response) => {
+    //deletes the vendor's account
+})
+
+Delete User Account
+app.delete('/user/:username', (request, response) => {
+    //deletes the vendor's account
+})
+```
+
+
 
 
 ## Wireframes
