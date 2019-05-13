@@ -105,6 +105,51 @@ async function main() {
     products: 'Mushrooms'
   });
 
+  const campoRosso = await Vendor.create({
+    name: 'Campo Russo',
+    products: 'Vegetables'
+  });
+
+  const caradonnaFarm = await Vendor.create({
+    name: 'Caradonna Farm',
+    products: 'Orchard fruit & veg'
+  });
+
+  const catoCornerFarm = await Vendor.create({
+    name: 'Cato Corner Farm',
+    products: 'Cow cheese'
+  });
+
+  const catskillMerino = await Vendor.create({
+    name: 'Catskill Merino',
+    products: ' Lamb & Wool'
+  });
+
+  const centralValleyDairy = await Vendor.create({
+    name: 'Central Valley Dairy',
+    products: 'Cow Cheese, eggs, vegetables'
+  });
+
+  const chateauRenaissance = await Vendor.create({
+    name: 'Chateau Renaissance',
+    products: `Finger Lake's Wine`
+  });
+
+  const cherryLaneFarm = await Vendor.create({
+    name: 'Cherry Lane Farm',
+    products: 'Vegetables'
+  });
+
+  const citySaucery = await Vendor.create({
+    name: 'City Saucery',
+    products: 'Preserved Tomatoes'
+  });
+
+  const considerBardwellFarm = await Vendor.create({
+    name: 'Consider Bardwell Farm',
+    products: 'Cheese',
+  });
+
 
 
 
@@ -187,6 +232,27 @@ async function main() {
   await anthonyRoad.setProduce(alcohol);
   await appleState.setProduce(honey);
   await ardithMae.setProduce(dairyCheese);
+  await bakersBounty.setProduce(bakedGoods);
+  await bearCreekFarm.setProduce(cutFlowers);
+  await berkshireBerries.setProduce(jamsPicklesPreserves);
+  await bethsFarmKitchen.setProduce(jamsPicklesPreserves);
+  await blueOysterCultivation.setProduce(mushrooms);
+  await bobolinkDairyBakery.setProduce(dairyCheese);
+  await bodySoulBakery.setProduce(bakerGrains);
+  await borgheseVineyard.setProduce(alcohol);
+  await breadAlone.setProduce(bakerGrains);
+  await breezyHillOrchard.setProduce(fruitOrchard);
+  await bulichMushrooms.setProduce(mushrooms);
+  await campoRosso.setProduce(vegetableHerbs);
+  await caradonnaFarm.setProduce(fruitOrchard);
+  await catoCornerFarm.setProduce(dairyCheese);
+  await catskillMerino.setProduce(livestock);
+  await centralValleyDairy.setProduce(dairyCheese);
+  await chateauRenaissance.setProduce(alcohol);
+  await cherryLaneFarm.setProduce(vegetableHerbs);
+  await citySaucery.setProduce(vegetableHerbs);
+  await considerBardwellFarm.setProduce(dairyCheese);
+
 
   await spirits.addDays([friday, saturday]);
   await alewife.addDays([monday, friday]);
@@ -195,6 +261,27 @@ async function main() {
   await anthonyRoad.addDay(saturday);
   await appleState.addDay(monday);
   await ardithMae.addDay(saturday);
+  await bakersBounty.addDay(wednesday);
+  await bearCreekFarm.addDays(wednesday, friday, saturday);
+  await berkshireBerries.addDays(monday, wednesday, saturday);
+  await bethsFarmKitchen.addDays(wednesday, friday, saturday);
+  await blueOysterCultivation.addDays(monday, saturday);
+  await bobolinkDairyBakery.addDay(friday);
+  await bodySoulBakery.addDays(monday, wednesday, friday, saturday);
+  await borgheseVineyard.addDay(friday);
+  await breadAlone.addDays(monday,wednesday, friday, saturday);
+  await breezyHillOrchard.addDays(wednesday, friday);
+  await bulichMushrooms.addDays(wednesday, saturday);
+  await campoRosso.addDay(friday);
+  await caradonnaFarm.addDays(friday, saturday);
+  await catoCornerFarm.addDay(saturday);
+  await catskillMerino.addDay(saturday);
+  await centralValleyDairy.addDays(monday, friday);
+  await chateauRenaissance.addDay(saturday);
+  await cherryLaneFarm.addDays(wednesday, saturday);
+  await citySaucery.addDays(wednesday, friday, saturday);
+  await considerBardwellFarm.addDays(monday, wednesday, friday);
+  
 
 }
 
