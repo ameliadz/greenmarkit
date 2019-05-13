@@ -37,7 +37,7 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 
 
 ## Component Hierarchy
-
+![IMG_20190513_103849](https://user-images.githubusercontent.com/47368206/57630348-71a37900-756b-11e9-8db8-9a39a0cd0c7f.jpg)
 
 
 ## Dependencies
