@@ -240,6 +240,56 @@ async function main() {
     products: 'Beer & Spirits'
   });
 
+  const hawthorneValleyFarm = await Vendor.create({
+    name: 'Hawthorne Valley Farm',
+    products: 'Vegetables, Cheese, Bakery'
+  });
+
+  const hickoryLedges = await Vendor.create({
+    name: 'Hickory Ledges',
+    products: 'Moonshine'
+  });
+
+  const hillrockEstateDistillery = await Vendor.create({
+    name: 'Hillrock Estate Distillery',
+    products: 'Whiskey'
+  });
+
+  const hoeffnerFarms = await Vendor.create({
+    name: 'Hoffner Farms',
+    products: 'Vegetables & potted plants'
+  });
+
+  const holySchmitts = await Vendor.create({
+    name: `Holy Schmitt's`,
+    products: 'Horseradish'
+  });
+
+  const hudsonValleyColdPress = await Vendor.create({
+    name: 'Hudson Valley Cold Press',
+    products: 'Sunflower oil & flour'
+  });
+
+  const hudsonValleyDuck = await Vendor.create({
+    name: 'Hudson Valley Duck',
+    products: 'Duck Products'
+  });
+
+  const hudsonValleyOrganics = await Vendor.create({
+    name: 'Hudson Valley Organics',
+    products: 'Sprouts & microgreens'
+  });
+
+  const jamesDurrFlowers = await Vendor.create({
+    name: 'James Durr FLowers',
+    products: 'FLowers'
+  });
+
+  const josephinesFeast = await Vendor.create({
+    name: `Josephine's Feast!`,
+    products: 'Jams & Preserves'
+  });
+
 
 
 
