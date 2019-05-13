@@ -290,6 +290,72 @@ async function main() {
     products: 'Jams & Preserves'
   });
 
+  const keithsFarm = await Vendor.create({
+    name: `Keith's Farm`,
+    products: 'Vegetables'
+  });
+
+  const kernanFarms = await Vendor.create({
+    name: `Kernan Farms`,
+    products: 'Vegetables & fruit'
+  });
+
+  const kimcheeHarvest = await Vendor.create({
+    name: 'Kimchee Harvest',
+    products: 'Kimchee'
+  });
+
+  const knollKrestFarm = await Vendor.create({
+    name: 'Knoll Krest Farm',
+    products: 'Vegetables & fruit'
+  });
+
+  const lanisFarm = await Vendor.create({
+    name: `Lani's Farm`,
+    products: 'Vegetables'
+  });
+
+  const lasDelicias = await Vendor.create({
+    name: 'Las Delicias',
+    products: 'Kosher & GF bakery'
+  });
+
+  const lavenderByTheBay = await Vendor.create({
+    name: 'Lavender By The Bay',
+    products: 'Lavendar products'
+  });
+
+  const locustGroveFarm = await Vendor.create({
+    name: 'Locust Grove Farm',
+    products: 'Orchard fruit'
+  });
+
+  const lostBread = await Vendor.create({
+    name: 'Lost Bread',
+    products: 'Bakery'
+  });
+
+  const lowlandFarm = await Vendor.create({
+    name: 'Lowland Farm',
+    products: 'Beef & lamb'
+  });
+
+  const luckyDogOrganics = await Vendor.create({
+    name: 'Luck Dog Organics',
+    products: 'Vegetables & Goat dairy'
+  });
+
+  const lunaFamilyFarm = await Vendor.create({
+    name: 'Luna Family Farm',
+    products: 'Cut Flowers & Herbs'
+  });
+  
+  const lynnhavenGoatFarm = await Vendor.create({
+    name: 'LynnHaven Goat Farm',
+    products: 'Goat dairy & meat'
+  });
+
+
 
 
 
@@ -423,6 +489,19 @@ async function main() {
   await hudsonValleyOrganics.setProduce(vegetableHerbs);
   await jamesDurrFlowers.setProduce(plantsFlowers);
   await josephinesFeast.setProduce(jamsPicklesPreserves);
+  await keithsFarm.setProduce(vegetableHerbs);
+  await kernanFarms.setProduce(vegetableHerbs);
+  await kimcheeHarvest.setProduce(vegetableHerbs);
+  await knollKrestFarm.setProduce(eggsPoultry);
+  await lanisFarm.setProduce(vegetableHerbs);
+  await lasDelicias.setProduce(bakedGoods);
+  await lavenderByTheBay.setProduce(vegetableHerbs);
+  await locustGroveFarm.setProduce(fruitOrchard);
+  await lostBread.setProduce(bakerGrains);
+  await lowlandFarm.setProduce(livestock);
+  await luckyDogOrganics.setProduce(vegetableHerbs);
+  await lunaFamilyFarm.setProduce(plantsFlowers)
+  await lynnhavenGoatFarm.setProduce(livestock);
 
   await spirits.addDays([friday, saturday]);
   await alewife.addDays([monday, friday]);
@@ -479,6 +558,19 @@ async function main() {
   await hudsonValleyOrganics.addDay(saturday);
   await jamesDurrFlowers.addDay(saturday);
   await josephinesFeast.addDays([wednesday, saturday]);
+  await keithsFarm.addDays([wednesday, saturday]);
+  await kernanFarms.addDay(wednesday);
+  await kimcheeHarvest.addDays([monday, wednesday, friday, saturday]);
+  await knollKrestFarm.addDays([wednesday, saturday]);
+  await lanisFarm.addDays([monday, wednesday, saturday]);
+  await lasDelicias.addDays([monday, wednesday, friday]);
+  await lavenderByTheBay.addDays([monday, wednesday, friday, saturday]);
+  await locustGroveFarm.addDays([wednesday, saturday]);
+  await lostBread.addDays([wednesday, friday]);
+  await lowlandFarm.addDay(monday);
+  await luckyDogOrganics.addDay(friday);
+  await lunaFamilyFarm.addDay(wednesday);
+  await lynnhavenGoatFarm.addDays([wednesday, saturday]);
 
   
 
