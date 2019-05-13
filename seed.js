@@ -43,12 +43,69 @@ async function main() {
   const appleState = await Vendor.create({
     name: 'Apple State Hilltop',
     products: 'Honey'
-  })
+  });
 
   const ardithMae = await Vendor.create({
     name: 'Ardith Mae Farm',
     products: 'Goat cheese, Meat'
   });
+
+  const bakersBounty = await Vendor.create({
+    name: `Baker's Bounty`,
+    products: 'Baked goods'
+  });
+
+  const bearCreekFarm = await Vendor.create({
+    name: 'Bear Creek Farm',
+    products: 'Curt flowers'
+  });
+
+  const berkshireBerries = await Vendor.create({
+    name: 'Berkshire Berries',
+    products: 'Jam, Honey, Syrup'
+  });
+
+  const bethsFarmKitchen = await Vendor.create({
+    name: `Beth's Farm Kitchen `,
+    products: 'Jams, Preserves'
+  });
+
+  const blueOysterCultivation = await Vendor.create({
+    name: 'Blue Oyster Cultivation',
+    products: 'Mushrooms'
+  });
+
+  const bobolinkDairyBakery = await Vendor.create({
+    name: 'Bobolink Dairy & Bakery',
+    products: 'Cow cheese, bread'
+  });
+
+  const bodySoulBakery = await Vendor.create({
+    name: 'Body & Soul Bakery',
+    products: 'Vegan/GF baked goods'
+  });
+
+  const borgheseVineyard = await Vendor.create({
+    name: 'Borghese Vineyard',
+    products: 'Long Island Wine'
+  });
+
+  const breadAlone = await Vendor.create({
+    name: 'Bread Alone',
+    products: 'Baked goods'
+  });
+
+  const breezyHillOrchard = await Vendor.create({
+    name: 'Breezy Hill Orchard',
+    products: 'Orchard fruit & related'
+  });
+
+  const bulichMushrooms = await Vendor.create({
+    name: 'Bulich Mushrooms',
+    products: 'Mushrooms'
+  });
+
+
 
 
   /* add produce seed data */
