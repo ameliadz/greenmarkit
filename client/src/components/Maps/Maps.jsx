@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class VendorsList extends Component {
+class Maps extends Component {
   render() {
     return (
       <div>
-        <h1>VendorsList</h1>
+        <h1>Maps</h1>
       </div>
     );
   }
 }
 
-export default VendorsList;
+export default Maps;
