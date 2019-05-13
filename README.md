@@ -34,11 +34,11 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 
 
 ## Wireframes
-<img width="1031" alt="AllVendors" src="https://user-images.githubusercontent.com/47368206/57635229-c0094580-7574-11e9-85d6-4dae25200ea4.png">
 <img width="1037" alt="Home" src="https://user-images.githubusercontent.com/47368206/57635230-c0094580-7574-11e9-9e72-1d47710dfd7e.png">
+<img width="1031" alt="AllVendors" src="https://user-images.githubusercontent.com/47368206/57635229-c0094580-7574-11e9-85d6-4dae25200ea4.png">
+<img width="1028" alt="VendorProfile" src="https://user-images.githubusercontent.com/47368206/57635233-c0a1dc00-7574-11e9-9574-c49cb5ef8195.png">
 <img width="1023" alt="Maps" src="https://user-images.githubusercontent.com/47368206/57635231-c0094580-7574-11e9-8371-eb702ad0f761.png">
 <img width="1029" alt="VendorDashboard" src="https://user-images.githubusercontent.com/47368206/57635232-c0a1dc00-7574-11e9-9db2-f0af61601168.png">
-<img width="1028" alt="VendorProfile" src="https://user-images.githubusercontent.com/47368206/57635233-c0a1dc00-7574-11e9-9574-c49cb5ef8195.png">
 <img width="1029" alt="VendorSignUp" src="https://user-images.githubusercontent.com/47368206/57635234-c0a1dc00-7574-11e9-8b72-9841856a09a9.png">
 
 
