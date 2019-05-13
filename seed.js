@@ -150,6 +150,28 @@ async function main() {
     products: 'Cheese',
   });
 
+  const dattolicoOrganics = await Vendor.create({
+    name: `D'Attolico Organics`,
+    products: 'Organic Vegetables & Hummus'
+  });
+
+  const deepMountainMaple = await Vendor.create({
+    name: 'Deep Mountain Maple',
+    products: 'Maple Products'
+  });
+
+  const dipaolaTurkeyFarm = await Vendor.create({
+    name: 'DiPaola Turkey Farm',
+    products: 'Turkey products'
+  });
+
+  const dutchmillGarden = await Vendor.create({
+    name: 'Dutchmill Garden',
+    products: 'Cut Flowers'
+  });
+
+  
+
 
 
 
