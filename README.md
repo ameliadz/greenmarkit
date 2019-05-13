@@ -27,7 +27,7 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 
 
 ## API Documentation
-(a list of server routes, structure of requests, structure of responses)
+
 
 ```
 New Vendor Account
@@ -117,3 +117,6 @@ app.delete('/user/:username', (request, response) => {
 ## Dependencies
 express, react, axios, pg, sequelize, cors, body-parser <br />
 morgan, eslint, nodemon (dev dependencies)
+
+## Trello Link
+https://trello.com/b/w0Cf4Vcv/greenmarkt
