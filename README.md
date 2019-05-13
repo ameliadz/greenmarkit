@@ -115,8 +115,8 @@ app.delete('/user/:username', (request, response) => {
 
 
 ## Dependencies
-express, react, axios, pg, sequelize, cors, body-parser <br />
-morgan, eslint, nodemon (dev dependencies)
+Express, React, axios, pg, Sequelize, cors, body-parser <br />
+morgan, ESLint, Nodemon (dev dependencies)
 
 ## Trello Link
 https://trello.com/b/w0Cf4Vcv/greenmarkt
