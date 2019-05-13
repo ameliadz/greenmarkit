@@ -7,10 +7,10 @@ GreenMark!t will provide an organized way to view and track the Union Square Gre
 
 Some challenges likely to be faced are:
 - Auth. We'll aim to resolve this by... working hard to figure it out? Ideally the app will include a users section and a vendors section, where the users can favorite vendors and/or produce types, and the vendors can update their information and share what produce they're really pumped to bring. Therefore we'll have to implement restricted views and associated profiles.
-- Connecting the backend to the front-end. 
-- Git workflow. 
+- Connecting the backend to the front-end. This will be solved by working diligently with plenty of forethought and testing. And referring to every lesson on the subject.
+- Git workflow. We'll aim to avoid conflicts by communicating frequently, tracking our branches, and working in the same room whenever possible.
 
-MVP will look like: a CRUD-fulfilling database and front-end to track vendors, with searchability.
+MVP will look like: a CRUD-fulfilling database and front-end to track vendors, with searchability.<br />
 POST-MVP will look like: a website with vendor login and user login, a map to display vendor locations in the market, and a calendar of events. POST-POST-MVP may expand to other farmers markets, though possibly in less detail.
 
 ## Feature List
@@ -21,10 +21,8 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 
 
 
-
-
 ## Entity Relationship Diagram
-(vendors, produce, days: vendors:produce = one-to-many; vendors:days = many-to-many)
+![Image from iOS](https://user-images.githubusercontent.com/47397924/57635739-c0561080-7575-11e9-9516-35e9aa338aa9.jpg)
 
 
 
@@ -48,5 +46,5 @@ POST-MVP will look like: a website with vendor login and user login, a map to di
 
 
 ## Dependencies
-express, react, axios, pg, sequelize, cors, body-parser <br>
-morgan, eslint, nodemon (dev dependencies) />
+express, react, axios, pg, sequelize, cors, body-parser <br />
+morgan, eslint, nodemon (dev dependencies)
