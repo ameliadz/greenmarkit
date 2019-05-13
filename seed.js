@@ -170,7 +170,78 @@ async function main() {
     products: 'Cut Flowers'
   });
 
-  
+  const eckertonHillFarm = await Vendor.create({
+    name: 'Eckerton Hill Farm',
+    products: 'Vegetables & fruit'
+  });
+
+  const fantasticGardens = await Vendor.create({
+    name: 'Fantastic Gardens',
+    products: 'Potted plants'
+  });
+
+  const fiestyAcresFarm = await Vendor.create({
+    name: 'Fiesty Acres Farm',
+    products: 'Game birds & eggs'
+  });
+
+  const fledgingCrowFarm = await Vendor.create({
+    name: 'Fledging Crow Farm',
+    products: 'Cert. organic vegetables'
+  });
+
+  const flyingPigsFarm = await Vendor.create({
+    name: 'Flying Pigs Farm',
+    products: 'Pork, chicken & eggs'
+  });
+
+  const francescasBakery = await Vendor.create({
+    name: `Francesca's Bakery`,
+    products: 'Baked Goods'
+  });
+
+  const furnaceCreekFarm = await Vendor.create({
+    name: 'Furnace Creek Farm',
+    products: 'Herbs, tisanes & elixers'
+  });
+
+  const gailsFarm = await Vendor.create({
+    name: `Gail's Farm`,
+    products: 'Eggs, Mushrooms'
+  });
+
+  const gopalFarm = await Vendor.create({
+    name: 'Gopal Farm',
+    products: 'Indian Vegetables'
+  });
+
+  const gorzynskiOrneryFarm = await Vendor.create({
+    name: 'Gorzynski Ornery Farm',
+    products: 'Vegetables, eggs'
+  });
+
+  const grazinAngusAcres = await Vendor.create({
+    name: `Grazin' Angus Farm`,
+    products: 'Beef, pork, chicken, eggs'
+  });
+
+  const grazinDistillery = await Vendor.create({
+    name: `Grazin' Distillery`,
+    products: 'Whiskey'
+  });
+
+  const growNycGrainstand = await Vendor.create({
+    name: 'GrowNYC Grainstand',
+    products: 'Flour, grains, beans'
+  }); 
+
+  const growNycGrainstandGuest = await Vendor.create({
+    name: 'GrowNYC Grainstand Guest',
+    products: 'Beer & Spirits'
+  });
+
+
+
 
 
 
@@ -274,7 +345,24 @@ async function main() {
   await cherryLaneFarm.setProduce(vegetableHerbs);
   await citySaucery.setProduce(vegetableHerbs);
   await considerBardwellFarm.setProduce(dairyCheese);
-
+  await dattolicoOrganics.setProduce(vegetableHerbs);
+  await deepMountainMaple.setProduce(mapleSyrup);
+  await dipaolaTurkeyFarm.setProduce(livestock);
+  await dutchmillGarden.setProduce(cutFlowers);
+  await eckertonHillFarm.setProduce(vegetableHerbs);
+  await fantasticGardens.setProduce(plantsFlowers);
+  await fiestyAcresFarm.setProduce(livestock);
+  await fledgingCrowFarm.setProduce(vegetableHerbs);
+  await flyingPigsFarm.setProduce(livestock);
+  await francescasBakery.setProduce(bakedGoods);
+  await furnaceCreekFarm.setProduce(vegetableHerbs);
+  await gailsFarm.setProduce(mushrooms);
+  await gopalFarm.setProduce(vegetableHerbs);
+  await gorzynskiOrneryFarm.setProduce(vegetableHerbs);
+  await grazinAngusAcres.setProduce(livestock);
+  await grazinDistillery.setProduce(alcohol);
+  await growNycGrainstand.setProduce(bakerGrains);
+  await growNycGrainstandGuest.setProduce(alcohol)
 
   await spirits.addDays([friday, saturday]);
   await alewife.addDays([monday, friday]);
@@ -303,6 +391,24 @@ async function main() {
   await cherryLaneFarm.addDays(wednesday, saturday);
   await citySaucery.addDays(wednesday, friday, saturday);
   await considerBardwellFarm.addDays(monday, wednesday, friday);
+  await dattolicoOrganics.addDay(saturday);
+  await deepMountainMaple.addDays(friday, saturday);
+  await dipaolaTurkeyFarm.addDays(wednesday, friday);
+  await dutchmillGarden.addDays(monday, wednesday);
+  await eckertonHillFarm.addDays(wednesday, saturday);
+  await fantasticGardens.addDays(wednesday, friday, saturday);
+  await fiestyAcresFarm.addDay(wednesday);
+  await fledgingCrowFarm.addDay(wednesday);
+  await flyingPigsFarm.addDays(friday, saturday);
+  await francescasBakery.addDay(friday);
+  await furnaceCreekFarm.addDays(wednesday, friday);
+  await gailsFarm.addDays(monday, wednesday, saturday);
+  await gopalFarm.addDay(friday);
+  await gorzynskiOrneryFarm.addDay(saturday);
+  await grazinAngusAcres.addDay(saturday);
+  await grazinDistillery.addDay(saturday);
+  await growNycGrainstand.addDays(wednesday, saturday);
+  await growNycGrainstandGuest.addDays(wednesday, saturday);
   
 
 }
