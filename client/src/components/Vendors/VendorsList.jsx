@@ -4,7 +4,7 @@ class VendorsList extends Component {
   render() {
     return (
       <div>
-        <h1>VendorsList</h1>
+        <h1>Vendors List</h1>
       </div>
     );
   }
