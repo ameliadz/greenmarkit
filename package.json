@@ -8,7 +8,7 @@
     "start": "nodemon server.js",
     "db:init": "dropdb --if-exists greenmarkit_db && createdb greenmarkit_db",
     "db:reset": "node resetDb.js",
-    "db:seed": "node seed.js",
+    "db:seed": "node seed.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,11 @@
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.0"
   }
