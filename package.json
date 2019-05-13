@@ -1,0 +1,35 @@
+{
+  "name": "greenmarkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "db:init": "dropdb --if-exists greenmarkit_db && createdb greenmarkit_db",
+    "db:reset": "node resetDb.js",
+    "db:seed": "node seed.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameliadz/greenmarkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ameliadz/greenmarkit/issues"
+  },
+  "homepage": "https://github.com/ameliadz/greenmarkit#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "pg": "^7.11.0",
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.0"
+  }
+}
