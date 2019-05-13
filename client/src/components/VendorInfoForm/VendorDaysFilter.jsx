@@ -3,9 +3,26 @@ import React, { Component } from "react";
 class VendorDaysFilter extends Component {
   render() {
     return (
-      <div>
-        <label htmlFor="days">Available</label>
-        <input type="checkbox" name="days" />
+      <div className="days-filter">
+        <div>
+          <label htmlFor="days">Days Available</label>
+        </div>
+        <div>
+          <input type="checkbox" name="days" />
+          <label for="monday">Monday</label>
+        </div>
+        <div>
+          <input type="checkbox" name="days" />
+          <label for="wednesday">Wednesday</label>
+        </div>
+        <div>
+          <input type="checkbox" name="days" />
+          <label for="friday">Friday</label>
+        </div>
+        <div>
+          <input type="checkbox" name="days" />
+          <label for="saturday">Saturday</label>
+        </div>
       </div>
     );
   }
