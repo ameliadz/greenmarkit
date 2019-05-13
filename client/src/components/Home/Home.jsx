@@ -4,7 +4,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>For Vendors, Made by Nerds</h1>
+        <h1>GreenMark!t</h1>
+        <h2>For Vendors, Made by Nerds</h2>
         <h3>About</h3>
         <p>
           GreenMark!t is a place where Union Square vendors can seamlessly share
