@@ -7,7 +7,7 @@ export const getVendors = async () => {
   return vendors.data.vendors;
 };
 
-export const createVendor = async (data) => {
-  const vendor = await axios.post(`${BASE_URL}/vendors`, data);
+export const createVendor = async () => {
+  const vendor = await axios.post(`${BASE_URL}/vendors`);
   console.log(vendor);
 };
