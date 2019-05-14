@@ -49,15 +49,21 @@ vendorRouter.get('/', async (request, response, next) => {
 vendorRouter.get('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
+<<<<<<< HEAD
     const vendor = await Vendor.findByPk(id, {
       include: [Day, Produce],
     });
+=======
+    const vendor = await Vendor.findByPk(id,
+      { include: [Day, Produce] });
+>>>>>>> master
 
     response.json({ vendor });
   } catch (e) {
     next(e);
   }
 });
+
 
 // Delete Vendor
 vendorRouter.delete('/:id', async (request, response, next) => {

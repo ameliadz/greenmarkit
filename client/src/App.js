@@ -8,6 +8,7 @@ import Vendors from './components/Vendors/VendorsList';
 import VendorInfoForm from './components/VendorInfoForm/VendorInfoForm';
 import Maps from './components/Maps/MapsContainer';
 
+
 class App extends Component {
   render() {
     return (
