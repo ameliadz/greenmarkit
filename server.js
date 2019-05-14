@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const vendorRouter = require('./routes/vendorRouter');
+const vendorRouter = require('./routes/vendors');
 
 const logger = require('morgan');
 const cors = require('cors');
@@ -17,6 +17,6 @@ app.use('/vendors', vendorRouter);
 
 app.get('/', (req, res) => {
   res.send('up and running');
-})
+});
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bulma/css/bulma.css";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 
@@ -6,6 +7,9 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Vendors from "./components/Vendors/VendorsList";
 import Maps from './components/Maps/MapsContainer';
+
+
+
 
 class App extends Component {
   render() {
