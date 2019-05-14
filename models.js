@@ -13,7 +13,7 @@ const db = new Sequelize({
 /* Model Definitions */
 const Vendor = db.define('vendor', {
   name: Sequelize.STRING,
-  products: Sequelize.ARRAY(Sequelize.STRING),
+  products: Sequelize.TEXT,
 }, {
   timestamps: true,
 });
