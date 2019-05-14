@@ -355,6 +355,91 @@ async function main() {
     products: 'Goat dairy & meat'
   });
 
+  const maduraFarm = await Vendor.create({
+    name: 'Madura Farm',
+    products: 'Vegetables'
+  });
+
+  const martinsPretzels = await Vendor.create({
+    name: `Martin's Pretzels`,
+    products: 'Pretzels'
+  });
+
+  const maxCreekHatchery = await Vendor.create({
+    name: 'Max Creek Hatchery',
+    products: 'Fish'
+  });
+
+  const migliorelliFarm = await Vendor.create({
+    name: 'Migliorelli Farm',
+    products: 'Vegetable, fruit & beer'
+  });
+
+  const miliportDairy = await Vendor.create({
+   name: 'Miliport Dairy',
+   products: 'Cheese, meat & eggs' 
+  });
+
+  const mountainSweetBerry = await Vendor.create({
+    name: 'Mountain Sweet Berry',
+    products: 'Vegetables, chips & strawberries'
+  });
+
+  const moxieRidgeCreamery = await Vendor.create({
+    name: 'Moxie Ridge Creamery',
+    products: 'Goat dairy'
+  });
+
+  const nemethBakery = await Vendor.create({
+    name: 'Nemeth Bakery',
+    products: 'Baked goods'
+  });
+
+  const northshireFarms = await Vendor.create({
+    name: 'Northshire Farms',
+    products: 'Vegetables, eggs & honey'
+  });
+
+  const norwichMeadowsFarm = await Vendor.create({
+    name: 'Norwich Meadows Farm',
+    products: 'Vegetables, chicken, eggs & pickles'
+  });
+
+  const newYorkCiderCo = await Vendor.create({
+    name: 'New York Cider Co.',
+    products: 'Hard Cider'
+  });
+
+  const oakGrovePlantation = await Vendor.create({
+    name: 'Oak Grove Plantation',
+    products: 'Vegetables, plants, fruit & grain'
+  });
+
+  const offTheWheat = await Vendor.create({
+    name: 'Off The Wheat',
+    products: 'GF & Keto bakery'
+  });
+
+  const orangeCountyDistillery = await Vendor.create({
+    name: 'Orange County Distillery',
+    products: 'Spitits'
+  });
+
+  const oleMotherHubbert = await Vendor.create({
+    name:  `Ole' Mother Hubbbert`,
+    products: 'Dairy, eggs, cheese'
+  });
+
+  const ourDailyBread = await Vendor.create({
+    name: 'Our Daily Bread',
+    products: 'Baked Goods'
+  });
+
+  
+
+
+
+
 
 
 
@@ -502,6 +587,23 @@ async function main() {
   await luckyDogOrganics.setProduce(vegetableHerbs);
   await lunaFamilyFarm.setProduce(plantsFlowers)
   await lynnhavenGoatFarm.setProduce(livestock);
+  await maduraFarm.setProduce(vegetableHerbs);
+  await martinsPretzels.setProduce(bakedGoods);
+  await maxCreekHatchery.setProduce(vegetableHerbs);
+  await migliorelliFarm.setProduce(vegetableHerbs);
+  await miliportDairy.setProduce(dairyCheese);
+  await mountainSweetBerry.setProduce(vegetableHerbs);
+  await moxieRidgeCreamery.setProduce(dairyCheese);
+  await nemethBakery.setProduce(bakedGoods);
+  await northshireFarms.setProduce(vegetableHerbs);
+  await norwichMeadowsFarm.setProduce(vegetableHerbs);
+  await newYorkCiderCo.setProduce(alcohol);
+  await oakGrovePlantation.setProduce(vegetableHerbs);
+  await offTheWheat.setProduce(bakerGrains);
+  await orangeCountyDistillery.setProduce(alcohol);
+  await oleMotherHubbert.setProduce(dairyCheese);
+  await ourDailyBread.setProduce(bakerGrains);
+  
 
   await spirits.addDays([friday, saturday]);
   await alewife.addDays([monday, friday]);
@@ -571,6 +673,23 @@ async function main() {
   await luckyDogOrganics.addDay(friday);
   await lunaFamilyFarm.addDay(wednesday);
   await lynnhavenGoatFarm.addDays([wednesday, saturday]);
+  await maduraFarm.addDays([monday, wednesday, friday]);
+  await martinsPretzels.addDays([monday, wednesday, friday, saturday]);
+  await maxCreekHatchery.addDay(wednesday);
+  await migliorelliFarm.addDays([wednesday, friday, saturday]);
+  await miliportDairy.addDays([wednesday, friday, saturday]);
+  await mountainSweetBerry.addDays([wednesday, friday, saturday]);
+  await moxieRidgeCreamery.addDay(friday);
+  await nemethBakery.addDay(monday);
+  await northshireFarms.addDay(saturday);
+  await norwichMeadowsFarm.addDays([monday, friday, saturday]);
+  await newYorkCiderCo.addDay(saturday);
+  await oakGrovePlantation.addDays([wednesday, friday, saturday]);
+  await offTheWheat.addDays([monday, friday, saturday]);
+  await orangeCountyDistillery.addDays([wednesday, friday, saturday]);
+  await oleMotherHubbert.addDays([monday, friday]);
+  await ourDailyBread.addDays([wednesday, friday, saturday]);
+  
 
   
 
