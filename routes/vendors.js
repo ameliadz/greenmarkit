@@ -48,6 +48,7 @@ vendorRouter.get('/:id', async (request, response, next) => {
   }
 });
 
+// Delete Vendor
 vendorRouter.delete('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
@@ -65,18 +66,21 @@ vendorRouter.delete('/:id', async (request, response, next) => {
 
 
 // update vendor products
-// vendorRouter.put('/:id/products', async (request, response, next) => {
-//  try {
-//    const { id } = request.params;
-//    const vendor = await Vendor.findByPk(id);
-//    vendor.update(vendor.dataValues.products +=`, ${request.body.products}`);
-//    console.log(vendor);
-//    response.json({ vendor });
-//  } catch (e) {
-//    console.log(e);
-//    next(e);
-//  }
-// });
+vendorRouter.put('/:id/products', async (request, response, next) => {
+  try {
+    const { id } = request.params;
+    const vendor = await Vendor.findByPk(id);
+    const newProducts = request.body.products;
+    vendor.update({
+      products: vendor.products + `, ${newProducts}`|| vendor.products
+    });
+    console.log(vendor);
+    response.json({ vendor });
+  } catch (e) {
+    console.log(e);
+    next(e);
+  }
+});
 
 //
 
