@@ -1,4 +1,4 @@
-const { Vendor, Produce, Day, Schedule } = require('../models.js')
+const { Vendor, Produce, Day, } = require('./models.js')
 
 async function main() {
   /* delete everything in the database */
@@ -435,6 +435,110 @@ async function main() {
     products: 'Baked Goods'
   });
 
+  const paintedGoat = await Vendor.create({
+    name: 'Painted Goat',
+    products: 'Goat cheese'
+  });
+
+  const paffenrothGarden = await Vendor.create({
+    name: 'Paffernroth Garden',
+    products: 'Vegetables'
+  });
+
+  const peddSeafood = await Vendor.create({
+    name: 'PP&DD Seafood',
+    products: 'Seafood'
+  });
+
+  const petaiPlantsFlowers = await Vendor.create({
+    name: 'PetAI Plants & Flowers',
+    products: 'Potted plants'
+  });
+
+  const phillipsFarms = await Vendor.create({
+    name: 'Phillips Farms',
+    products: 'Vegetables, fruit, preserves'
+  });
+
+  const puraVidaFisheries = await Vendor.create({
+    name: 'Pura Vida Fisheries',
+    products: 'Seafood'
+  });
+
+  const quartonFarm = await Vendor.create({
+    name: 'Quarton Farm',
+    products: 'Vegetables & Beans'
+  });
+
+  const quattrosGameFarm = await Vendor.create({
+    name: `Quattro's Game Farm`,
+    products: 'Poultry, game & eggs'
+  });
+
+  const raceFarm = await Vendor.create({
+    name: 'Race Farm',
+    products: 'Vegetable, fruit & related'
+  });
+
+  const rambleCreek = await Vendor.create({
+    name: 'Ramble Creek',
+    products: 'Poultry, mushrooms'
+  });
+
+  const ravenBoar = await Vendor.create({
+    name: 'Raven & Boar',
+    products: 'Sasuage, Dunmplings'
+  });
+
+  const riseRootFarm = await Vendor.create({
+    name: 'Rise & Root Farm',
+    products: 'Stater plants & vegetables'
+  });
+
+  const riverGarden = await Vendor.create({
+    name: 'River Garden',
+    products: 'Flowers, dried flowers'
+  });
+
+  const riverineRanch = await Vendor.create({
+    name: 'Riverine Ranch',
+    products: 'Water buffalo meat, dairy'
+  });
+
+  const roamingAcres = await Vendor.create({
+    name: 'Roaming Acres',
+    products: 'Bison, ostrich and pork'
+  });
+
+  const ronnybrookFarm = await Vendor.create({
+    name: 'Ronnybrook Farm',
+    products: 'Cow Dairy'
+  });
+
+  const roseMeadowFarm = await Vendor.create({
+    name: 'Rose Meadow Farm',
+    products: 'Flowers'
+  });
+
+  const rosehavenAlpacas = await Vendor.create({
+    name: 'Rosehaven Alpacas',
+    products: 'Wool products & yarn'
+  });
+
+  const rowByRowFarm = await Vendor.create({
+    name: 'Row By Row Farm',
+    products: 'Vegetables & eggs'
+  });
+
+  const roxburyMountainMaple = await Vendor.create({
+    name: 'Roxbury Mountain Maple',
+    products: 'Maple syrup products'
+  });
+
+  const runnerStone = await Vendor.create({
+    name: 'Runner & Stone',
+    products: 'Baked goods'
+  });
   
 
 
@@ -603,6 +707,27 @@ async function main() {
   await orangeCountyDistillery.setProduce(alcohol);
   await oleMotherHubbert.setProduce(dairyCheese);
   await ourDailyBread.setProduce(bakerGrains);
+  await paintedGoat.setProduce(dairyCheese);
+  await paffenrothGarden.setProduce(vegetableHerbs);
+  await peddSeafood.setProduce(americanSeafood);
+  await petaiPlantsFlowers.setProduce(plantsFlowers);
+  await phillipsFarms.setProduce(vegetableHerbs);
+  await puraVidaFisheries.setProduce(americanSeafood);
+  await quartonFarm.setProduce(vegetableHerbs);
+  await quattrosGameFarm.setProduce(livestock);
+  await raceFarm.setProduce(vegetableHerbs);
+  await rambleCreek.setProduce(eggsPoultry);
+  await ravenBoar.setProduce(livestock);
+  await riseRootFarm.setProduce(plantsFlowers);
+  await riverGarden.setProduce(plantsFlowers);
+  await riverineRanch.setProduce(livestock);
+  await roamingAcres.setProduce(livestock);
+  await ronnybrookFarm.setProduce(dairyCheese);
+  await roseMeadowFarm.setProduce(plantsFlowers);
+  await rosehavenAlpacas.setProduce(livestock);
+  await rowByRowFarm.setProduce(vegetableHerbs);
+  await roxburyMountainMaple.setProduce(mapleSyrup);
+  await runnerStone.setProduce(bakedGoods);
   
 
   await spirits.addDays([friday, saturday]);
@@ -689,6 +814,27 @@ async function main() {
   await orangeCountyDistillery.addDays([wednesday, friday, saturday]);
   await oleMotherHubbert.addDays([monday, friday]);
   await ourDailyBread.addDays([wednesday, friday, saturday]);
+  await paintedGoat.addDay(monday);
+  await paffenrothGarden.addDays([wednesday, saturday]);
+  await peddSeafood.addDays([monday, saturday]);
+  await petaiPlantsFlowers.addDays([wednesday, friday, saturday]);
+  await phillipsFarms.addDays([monday, wednesday, friday, saturday]);
+  await puraVidaFisheries.addDay([friday]);
+  await quartonFarm.addDay(monday);
+  await quattrosGameFarm.addDay(saturday);
+  await raceFarm.addDay(monday);
+  await rambleCreek.addDay(friday);
+  await ravenBoar.addDays([wednesday, saturday]);
+  await riseRootFarm.addDay(friday);
+  await riverGarden.addDays([monday, wednesday, friday, saturday]);
+  await riverineRanch.addDays([wednesday, saturday]);
+  await roamingAcres.addDays([monday, friday, saturday]);
+  await ronnybrookFarm.addDays([wednesday, saturday]);
+  await roseMeadowFarm.addDays([monday, friday, saturday]);
+  await rosehavenAlpacas.addDays([wednesday, friday]);
+  await rowByRowFarm.addDay(saturday);
+  await roxburyMountainMaple.addDays([monday, wednesday]); 
+  await runnerStone.addDay(saturday);
   
 
   
