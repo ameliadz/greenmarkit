@@ -28,17 +28,10 @@ class VendorsList extends Component {
   }
 
   render() {
-    const { vendors } = this.state;
     return (
       <div>
         <h1>Vendors List</h1>
-        {vendors.map(vendor => {
-          return (
-            <div className="vendor-item" key={vendor.id}>
-              <h2>{vendor.name}</h2>
-              <p>Products: {vendor.products}</p>
-              <p>Category: {vendor.produce.name}</p>
-          </div> )})}
+        { this.state.vendors.length > 0 ? this.renderVendors() : null }
       </div>
     );
   }
