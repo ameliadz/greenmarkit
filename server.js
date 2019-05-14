@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const vendorRouter = require('./routes/vendorRouter');
+const vendorRouter = require('./routes/vendors');
 
 const logger = require('morgan');
 const cors = require('cors');
