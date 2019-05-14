@@ -10,4 +10,4 @@ export const getVendors = async () => {
 export const createVendor = async (data) => {
   const vendor = await axios.post(`${BASE_URL}/vendors`, data);
   console.log(vendor);
-}
+};
