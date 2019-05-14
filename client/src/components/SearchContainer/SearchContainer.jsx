@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import SearchByProduct from "../SearchContainer/SearchByProduct";
+import SearchByVendor from "../SearchContainer/SearchByVendor"
 
 class SearchContainer extends Component {
   render() {
     return (
       <div>
-        <h1>SearchContainer</h1>
+        <SearchByVendor />
+        <SearchByProduct />
       </div>
     );
   }
