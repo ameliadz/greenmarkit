@@ -645,6 +645,61 @@ async function main() {
     products: 'Hydroponic Vegetables'
   });
 
+  const unionSquareGrassman = await Vendor.create({
+    name: 'Union Square Grassman',
+    products: 'Wheatgrass & sprouts'
+  });
+
+  const valleyShepherd = await Vendor.create({
+    name: 'Valley Shepherd',
+    products: 'Cheese & Butter'
+  });
+
+  const vanHoutenFarms = await Vendor.create({
+    name: 'Van Houten Farms',
+    products: 'Vegetables, plants, trees'
+  });
+
+  const violetHillFarm = await Vendor.create({
+    name: 'Violet Hill Farm',
+    products: 'Meat, pork, eggs & herbs'
+  }); 
+
+  const wildcraftFarm = await Vendor.create({
+    name: 'Wildcraft Farm',
+    products: 'Popcorn & kernals'
+  });
+
+  const wilklowOrchards = await Vendor.create({
+    name: 'Wilklow Orchards',
+    products: 'Fruits & vegetables'
+  });
+
+  const willowWispOrganic = await Vendor.create({
+    name: 'Willow Wisp Organic',
+    products: 'Vegetables & cut flowers'
+  });
+
+  const wildYarrow = await Vendor.create({
+    name: 'Wild Yarrow',
+    products: 'Plant Starts'
+  });
+
+  const windfallFarms = await Vendor.create({
+    name: 'Windfall Farms',
+    products: 'vegetables, eggs & syrup'
+  });
+
+  const woodHomesteadMaple = await Vendor.create({
+    name: 'Wood Homestead Maple',
+    products: 'Maple products & eggs'
+  });
+
+  const yellowBellFarm = await Vendor.create({
+    name: 'Yellow Bell Farm',
+    products: 'Chicken & eggs'
+  });
+
 
   
 
@@ -856,6 +911,17 @@ async function main() {
   await troncillitoFarms.setProduce(fruitOrchard);
   await tweefonteinFarm.setProduce(vegetableHerbs);
   await twoGuysFromWoodbridge.setProduce(vegetableHerbs);
+  await unionSquareGrassman.setProduce(vegetableHerbs);
+  await valleyShepherd.setProduce(dairyCheese);
+  await vanHoutenFarms.setProduce(vegetableHerbs);
+  await violetHillFarm.setProduce(livestock);
+  await wildcraftFarm.setProduce(bakerGrains);
+  await wilklowOrchards.setProduce(fruitOrchard);
+  await willowWispOrganic.setProduce(vegetableHerbs);
+  await wildYarrow.setProduce(plantsFlowers);
+  await windfallFarms.setProduce(vegetableHerbs);
+  await woodHomesteadMaple.setProduce(mapleSyrup);
+  await yellowBellFarm.setProduce(eggsPoultry);
 
   
 
@@ -984,7 +1050,18 @@ async function main() {
   await tremblayApiaries.addDays([friday, saturday]);
   await troncillitoFarms.addDay(monday);
   await tweefonteinFarm.addDays([monday, friday, saturday]);
-  await twoGuysFromWoodbridge.addDays([wednesday, friday, saturday])
+  await twoGuysFromWoodbridge.addDays([wednesday, friday, saturday]);
+  await unionSquareGrassman.addDays([monday, wednesday, friday, saturday]);
+  await valleyShepherd.addDay(saturday);
+  await vanHoutenFarms.addDays([monday, wednesday, friday, saturday]);
+  await violetHillFarm.addDay(saturday);
+  await wildcraftFarm.addDays([monday, wednesday, friday, saturday]);
+  await wilklowOrchards.addDay(monday);
+  await willowWispOrganic.addDay(wednesday);
+  await wildYarrow.addDays([wednesday, saturday]);
+  await windfallFarms.addDays([wednesday, saturday]);
+  await woodHomesteadMaple.addDay(saturday);
+  await yellowBellFarm.addDay(wednesday);
 
   
 
