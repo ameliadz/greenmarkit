@@ -10,4 +10,21 @@ body {
   background-image: url("https://i.imgur.com/32jDJWN.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  
+}
+
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10em;
+}
+.searchWrapper div form input{
+  width: 20em;
+}
+
+.searchWrapper div form p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
