@@ -1,4 +1,4 @@
-const { Vendor, Produce, Day, Schedule } = require('../models.js')
+const { Vendor, Produce, Day, Schedule } = require('./models.js')
 
 async function main() {
   /* delete everything in the database */

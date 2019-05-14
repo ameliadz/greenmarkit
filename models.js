@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 /* Synchronize Model with Database */
 const db = new Sequelize({
-  database: 'fmarketdb',
+  database: 'greenmarkit_db',
   dialect: 'postgres',
   define: {
     underscored: true,
