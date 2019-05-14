@@ -1,4 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
 header {
   display: flex;
   justify-content: space-evenly;
+  font-family: 'Fjalla One', sans-serif;
 }
+
+nav {
+background-color: #076D4D;
+padding: 10px;
+}
+
