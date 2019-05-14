@@ -1,5 +1,6 @@
 const { Router } = require('express');
-const { Vendor } = require('../models');
+const { Op } = require('sequelize');
+const { Vendor, Day, Produce } = require('../models');
 
 const vendorRouter = Router();
 
@@ -28,7 +29,9 @@ vendorRouter.put('/:id', async (request, response, next) => {
 // Find All Vendors
 vendorRouter.get('/', async (request, response, next) => {
   try {
-    const vendors = await Vendor.findAll();
+    const vendors = await Vendor.findAll({
+      include: [Day, Produce],
+    });
 
     response.json({ vendors });
   } catch (e) {
@@ -40,13 +43,15 @@ vendorRouter.get('/', async (request, response, next) => {
 vendorRouter.get('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
-    const vendor = await Vendor.findByPk(id);
+    const vendor = await Vendor.findByPk(id,
+      { include: [Day, Produce] });
 
     response.json({ vendor });
   } catch (e) {
     next(e);
   }
 });
+
 
 // Delete Vendor
 vendorRouter.delete('/:id', async (request, response, next) => {
@@ -63,26 +68,6 @@ vendorRouter.delete('/:id', async (request, response, next) => {
     next(e);
   }
 });
-
-
-// update vendor products
-vendorRouter.put('/:id/products', async (request, response, next) => {
-  try {
-    const { id } = request.params;
-    const vendor = await Vendor.findByPk(id);
-    const newProducts = request.body.products;
-    vendor.update({
-      products: vendor.products + `, ${newProducts}`|| vendor.products
-    });
-    console.log(vendor);
-    response.json({ vendor });
-  } catch (e) {
-    console.log(e);
-    next(e);
-  }
-});
-
-//
 
 //****************************** POST MVP **********************************
 //vendor login
