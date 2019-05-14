@@ -8,22 +8,22 @@ class VendorHours extends Component {
           <input type="text" name="open" placeholder="8:00" />
           <div>
             <input type="radio" name="open" />
-            <label for="am">am</label>
+            <label htmlFor="am">am</label>
           </div>
           <div>
             <input type="radio" name="open" />
-            <label for="pm">pm</label>
+            <label htmlFor="pm">pm</label>
           </div>
         </div>
         <div className="closing-time">
           <input type="text" name="close" placeholder="5:00" />
           <div>
             <input type="radio" name="close" />
-            <label for="am">am</label>
+            <label htmlFor="am">am</label>
           </div>
           <div>
             <input type="radio" name="close" />
-            <label for="pm">pm</label>
+            <label htmlFor="pm">pm</label>
           </div>
         </div>
       </div>

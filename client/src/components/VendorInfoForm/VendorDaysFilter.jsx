@@ -8,20 +8,20 @@ class VendorDaysFilter extends Component {
           <label htmlFor="days">Days Available</label>
         </div>
         <div>
-          <input type="radio" name="days" />
-          <label for="monday">Monday</label>
+          <input type="checkbox" name="days" />
+          <label htmlFor="monday">Monday</label>
         </div>
         <div>
-          <input type="radio" name="days" />
-          <label for="wednesday">Wednesday</label>
+          <input type="checkbox" name="days" />
+          <label htmlFor="wednesday">Wednesday</label>
         </div>
         <div>
-          <input type="radio" name="days" />
-          <label for="friday">Friday</label>
+          <input type="checkbox" name="days" />
+          <label htmlFor="friday">Friday</label>
         </div>
         <div>
-          <input type="radio" name="days" />
-          <label for="saturday">Saturday</label>
+          <input type="checkbox" name="days" />
+          <label htmlFor="saturday">Saturday</label>
         </div>
       </div>
     );

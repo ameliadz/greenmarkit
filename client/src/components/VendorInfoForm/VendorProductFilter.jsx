@@ -9,55 +9,55 @@ class VendorProductFilter extends Component {
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="vegetables-herbs">Vegetable/Herbs</label>
+          <label htmlFor="vegetables-herbs">Vegetable/Herbs</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="fruit-orchard">Fruit/Orchard</label>
+          <label htmlFor="fruit-orchard">Fruit/Orchard</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="livestock">Livestock</label>
+          <label htmlFor="livestock">Livestock</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="plants-flowers">Plants/Flowers</label>
+          <label htmlFor="plants-flowers">Plants/Flowers</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="baker-grains">Baker/Grains</label>
+          <label htmlFor="baker-grains">Baker/Grains</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="fish">Fish</label>
+          <label htmlFor="fish">Fish</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="honey">Honey</label>
+          <label htmlFor="honey">Honey</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="dairy-cheese">Dairy/Cheese</label>
+          <label htmlFor="dairy-cheese">Dairy/Cheese</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="eggs-poultry">Eggs/Poultry</label>
+          <label htmlFor="eggs-poultry">Eggs/Poultry</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="mushrooms">Mushrooms</label>
+          <label htmlFor="mushrooms">Mushrooms</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="wine-beer-spirits">Wine/Beer/Spirits</label>
+          <label htmlFor="wine-beer-spirits">Wine/Beer/Spirits</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="maplesyrup">Maple Syrup</label>
+          <label htmlFor="maplesyrup">Maple Syrup</label>
         </div>
         <div>
           <input type="radio" name="products" />
-          <label for="jams-pickles-preserves">Jams/Pickles/Preserves</label>
+          <label htmlFor="jams-pickles-preserves">Jams/Pickles/Preserves</label>
         </div>
       </div>
     );
