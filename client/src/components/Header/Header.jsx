@@ -24,6 +24,12 @@ const Header = () => {
         >
           Market Map
         </Link>
+        <Link
+          to={"/vendors/create"}
+          style={{ textDecoration: "none", color: "#E0B564", fontSize: "18px" }}
+        >
+          Become a Vendor
+        </Link>
         {/* Login will be a dropdown */}
         {/* <Link to={'/vendor/login'}>Login</Link> */}
       </header>
