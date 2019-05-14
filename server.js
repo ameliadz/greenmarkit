@@ -17,6 +17,6 @@ app.use('/vendors', vendorRouter);
 
 app.get('/', (req, res) => {
   res.send('up and running');
-})
+});
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
