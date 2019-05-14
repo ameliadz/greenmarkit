@@ -594,6 +594,58 @@ async function main() {
     name: 'Sycamore Farms',
     products: 'Vegetables & Fruit'
   });
+
+  const tamarackHollowFarm = await Vendor.create({
+    new: 'Tamarack Hollow Farm',
+    products: 'Vegetables & eggs'
+  });
+
+  const terhuneOrchards = await Vendor.create({
+    name: 'Terhune Orchards',
+    products: 'Fruit & baked goods'
+  });
+
+  const toigoOrchards = await Vendor.create({
+    name: 'Toigo Orchards',
+    products: 'fruit, tomato, preserves'
+  });
+  
+  const tonjesFarmDairy = await Vendor.create({
+    name: 'Tonjes Farm Dairy',
+    products: 'Cows milk & dairy'
+  });
+
+  const transgenerationalFarm = await Vendor.create({
+    name: 'Transgenerational Farm',
+    products: 'Herbs, vegetables, microgreens'
+  });
+
+  const treeliciousOrchard = await Vendor.create({
+    name: 'Treelicious Orchard',
+    products: 'Fruit & baked goods'
+  });
+
+  const tremblayApiaries = await Vendor.create({
+    name: 'Tremblay Apiaries',
+    products: 'Honey, candles, soap'
+  });
+
+  const troncillitoFarms = await Vendor.create({
+    name: 'Troncillito Farms',
+    products: 'Fruit & cider'
+  });
+
+  const tweefonteinFarm = await Vendor.create({
+    name: 'Tweenfontein Farm',
+    products: 'Teas, herbs, tincitures'
+  });
+
+  const twoGuysFromWoodbridge = await Vendor.create({
+    name: 'Two Guys From Woodbridge',
+    products: 'Hydroponic Vegetables'
+  });
+
+
   
 
 
@@ -794,6 +846,16 @@ async function main() {
   await stonyMountainRanch.setProduce(livestock);
   await sunFedBeef.setProduce(livestock);
   await sycamoreFarms.setProduce(vegetableHerbs);
+  await tamarackHollowFarm.setProduce(vegetableHerbs);
+  await terhuneOrchards.setProduce(fruitOrchard);
+  await toigoOrchards.setProduce(fruitOrchard);
+  await tonjesFarmDairy.setProduce(dairyCheese);
+  await transgenerationalFarm.setProduce(vegetableHerbs);
+  await treeliciousOrchard.setProduce(fruitOrchard);
+  await tremblayApiaries.setProduce(honey);
+  await troncillitoFarms.setProduce(fruitOrchard);
+  await tweefonteinFarm.setProduce(vegetableHerbs);
+  await twoGuysFromWoodbridge.setProduce(vegetableHerbs);
 
   
 
@@ -913,7 +975,16 @@ async function main() {
   await stonyMountainRanch.addDay(wednesday);
   await sunFedBeef.addDay(friday);
   await sycamoreFarms.addDays([wednesday, friday, saturday]);
-  
+  await tamarackHollowFarm.addDays([wednesday, saturday]);
+  await terhuneOrchards.addDays([wednesday, saturday]);
+  await toigoOrchards.addDay(friday);
+  await tonjesFarmDairy.addDay(saturday);
+  await transgenerationalFarm.addDay(vegetableHerbs);
+  await treeliciousOrchard.addDay(friday);
+  await tremblayApiaries.addDays([friday, saturday]);
+  await troncillitoFarms.addDay(monday);
+  await tweefonteinFarm.addDays([monday, friday, saturday]);
+  await twoGuysFromWoodbridge.addDays([wednesday, friday, saturday])
 
   
 
