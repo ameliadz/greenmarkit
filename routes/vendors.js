@@ -1,5 +1,6 @@
 const { Router } = require('express');
-const { Vendor } = require('../models');
+const { Op } = require('sequelize');
+const { Vendor, Day, Produce } = require('../models');
 
 const vendorRouter = Router();
 
@@ -34,7 +35,9 @@ vendorRouter.put('/:id', async (request, response, next) => {
 // Find All Vendors
 vendorRouter.get('/', async (request, response, next) => {
   try {
-    const vendors = await Vendor.findAll();
+    const vendors = await Vendor.findAll({
+      include: [Day, Produce],
+    });
 
     response.json({ vendors });
   } catch (e) {
@@ -46,7 +49,9 @@ vendorRouter.get('/', async (request, response, next) => {
 vendorRouter.get('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
-    const vendor = await Vendor.findByPk(id);
+    const vendor = await Vendor.findByPk(id, {
+      include: [Day, Produce],
+    });
 
     response.json({ vendor });
   } catch (e) {
