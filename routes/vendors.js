@@ -7,7 +7,13 @@ const vendorRouter = Router();
 // create new vendor
 vendorRouter.post('/', async (request, response, next) => {
   try {
-    const vendor = await Vendor.create(request.body);
+    console.log(request.body);
+    const vendor = await Vendor.create({
+      name: request.body.name,
+      products: request.body.products,
+    });
+    await vendor.setProduce(request.body.produce);
+    await vendor.addDays(request.body.days);
     response.json({ vendor });
   } catch (e) {
     next(e);
@@ -43,9 +49,9 @@ vendorRouter.get('/', async (request, response, next) => {
 vendorRouter.get('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
-    const vendor = await Vendor.findByPk(id,
-      { include: [Day, Produce] });
-
+    const vendor = await Vendor.findByPk(id, {
+      include: [Day, Produce],
+    });
     response.json({ vendor });
   } catch (e) {
     next(e);
@@ -60,7 +66,7 @@ vendorRouter.delete('/:id', async (request, response, next) => {
     const targetVendor = await Vendor.findByPk(id);
     await Vendor.destroy({
       where: {
-        id: id
+        id,
       },
     });
     response.send(`${targetVendor.dataValues.name} has been deleted`);
@@ -69,16 +75,35 @@ vendorRouter.delete('/:id', async (request, response, next) => {
   }
 });
 
-//****************************** POST MVP **********************************
-//vendor login
-//vendorRouter.get('/vendors/:id', async (request,response, next) => { 
+
+// update vendor products
+vendorRouter.put('/:id/products', async (request, response, next) => {
+  try {
+    const { id } = request.params;
+    const vendor = await Vendor.findByPk(id);
+    const newProducts = request.body.products;
+    vendor.update({
+      products: `${vendor.products}, ${newProducts}` || vendor.products,
+    });
+    console.log(vendor);
+    response.json({ vendor });
+  } catch (e) {
+    console.log(e);
+    next(e);
+  }
+});
+
+//
+
+//* ***************************** POST MVP **********************************
+// vendor login
+// vendorRouter.get('/vendors/:id', async (request,response, next) => {
 //    try {
 //
 //  } catch (e) {
 //      next(e);
 //  }
-//}
-
+// }
 
 
 module.exports = vendorRouter;
