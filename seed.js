@@ -539,6 +539,61 @@ async function main() {
     name: 'Runner & Stone',
     products: 'Baked goods'
   });
+
+  const ssoProduce = await Vendor.create({
+    name: 'S&SO Produce',
+    products: 'Vegetables'
+  });
+
+  const samascottOrchards = await Vendor.create({
+    name: 'Samascott Orchards',
+    products: 'Fruit & vegetable related'
+  });
+
+  const seatuckFishCompany = await Vendor.create({
+    name: 'Seatuck Fish Company',
+    products: 'Seafood'
+  });
+
+  const shannonBrookFarm = await Vendor.create({
+    name: 'Shannon Brook Farm',
+    products: 'Poultry, red meat & eggs'
+  });
+
+  const sheWolfBakery = await Vendor.create({
+    name: 'She Wolf Bakery',
+    products: 'Bread'    
+  });
+
+  const shushanValleyHydro = await Vendor.create({
+    name: 'Shushan Valley Hydro',
+    products: 'Hydroponic tomatoes & veg'
+  });
+
+  const silvaOrchids = await Vendor.create({
+    name: 'Silva Orchids',
+    products: 'Orchids'
+  });
+
+  const stokesFarm = await Vendor.create({
+    name: 'Stokes Farm',
+    products: 'Vegetables & Plants'
+  });
+
+  const stonyMountainRanch = await Vendor.create({
+    name: 'Stony Mountain Ranch',
+    products: 'Meat, chicken, pork & eggs'
+  });
+
+  const sunFedBeef = await Vendor.create({
+    name: 'Sun Fed Beef',
+    products: 'beef, rabbit & chicken'
+  });
+
+  const sycamoreFarms = await Vendor.create({
+    name: 'Sycamore Farms',
+    products: 'Vegetables & Fruit'
+  });
   
 
 
@@ -728,6 +783,18 @@ async function main() {
   await rowByRowFarm.setProduce(vegetableHerbs);
   await roxburyMountainMaple.setProduce(mapleSyrup);
   await runnerStone.setProduce(bakedGoods);
+  await ssoProduce.setProduce(vegetableHerbs);
+  await samascottOrchards.setProduce(fruitOrchard);
+  await seatuckFishCompany.setProduce(americanSeafood);
+  await shannonBrookFarm.setProduce(eggsPoultry);
+  await sheWolfBakery.setProduce(bakerGrains);
+  await shushanValleyHydro.setProduce(vegetableHerbs);
+  await silvaOrchids.setProduce(cutFlowers);
+  await stokesFarm.setProduce(vegetableHerbs);
+  await stonyMountainRanch.setProduce(livestock);
+  await sunFedBeef.setProduce(livestock);
+  await sycamoreFarms.setProduce(vegetableHerbs);
+
   
 
   await spirits.addDays([friday, saturday]);
@@ -835,6 +902,17 @@ async function main() {
   await rowByRowFarm.addDay(saturday);
   await roxburyMountainMaple.addDays([monday, wednesday]); 
   await runnerStone.addDay(saturday);
+  await ssoProduce.addDays([wednesday, saturday]);
+  await samascottOrchards.addDay(friday);
+  await seatuckFishCompany.addDay(saturday);
+  await shannonBrookFarm.addDay(wednesday);
+  await sheWolfBakery.addDays([monday, wednesday, friday]);
+  await shushanValleyHydro.addDays([wednesday, saturday]);
+  await silvaOrchids.addDays([wednesday, saturday]);
+  await stokesFarm.addDays([wednesday, saturday]);
+  await stonyMountainRanch.addDay(wednesday);
+  await sunFedBeef.addDay(friday);
+  await sycamoreFarms.addDays([wednesday, friday, saturday]);
   
 
   
