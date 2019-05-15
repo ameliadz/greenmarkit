@@ -70,7 +70,7 @@ vendorRouter.delete('/:id', async (request, response, next) => {
         id,
       },
     });
-    response.send(`${targetVendor.dataValues.name} has been deleted`);
+    response.json(targetVendor.dataValues);
   } catch (e) {
     next(e);
   }

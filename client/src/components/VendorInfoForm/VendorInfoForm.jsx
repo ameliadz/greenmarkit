@@ -50,10 +50,11 @@ class VendorInfoForm extends Component {
     }
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     let { name, products, category, days} = this.state;
-    createVendor({ name, products, category, days });
+    const created = await createVendor({ name, products, category, days });
+    console.log(`created ${created.name}`);
   };
 
   render() {
