@@ -33,7 +33,7 @@ async function main() {
   const andrewsLocal = await Vendor.create({
     name: `Andrew's Local Honey`,
     products: 'honey, soap'
-
+  });
 
   const anthonyRoad = await Vendor.create({
     name: 'Anthony Road Winery',
