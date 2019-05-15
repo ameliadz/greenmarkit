@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import { getSingleVendor } from '../../services/vendorsService';
 import VendorUpdateProducts from '../VendorUpdateProducts/VendorUpdateProducts';
+import AddProductEntry from '../AddProductEntry/AddProductEntry';
 
 class VendorUpdate extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class VendorUpdate extends Component {
       products: '',
       category: '',
       days: [],
+      addEntry: false,
     };
 
     this.handleTextInput = this.handleTextInput.bind(this);
@@ -18,6 +20,7 @@ class VendorUpdate extends Component {
     this.HandleDaySelect = this.handleDaySelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.deleteEntry = this.deleteEntry.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
   }
 
 
@@ -75,6 +78,10 @@ class VendorUpdate extends Component {
     this.setState({ products: productList.join(', ')});
   };
 
+  handleAdd(e) {
+    this.setState({ addEntry: !this.state.addEntry });
+  };
+
   render () {
     const productList = this.state.products.split(", ").map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
     console.log(productList);
@@ -85,12 +92,12 @@ class VendorUpdate extends Component {
           <div>
             <label>Vendor Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleTextInput} />
-            <label>Products List</label>
-            <input type="text" name="products" onChange={this.handleTextInput} />
           </div>
           <input type="submit" value="Submit" />
         </form>
+        <AddProductEntry addEntry={this.state.addEntry} handleAdd={this.state.handleAdd} />
           {productList}
+        <input id="addButton" type="button" value="Add Product" onClick={this.handleAdd} />
       </div>
     );
   };
