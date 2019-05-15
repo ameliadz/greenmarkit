@@ -18,7 +18,7 @@ const Vendor = db.define('vendor', {
   timestamps: true,
 });
 
-const Category = db.define('produce', {
+const Category = db.define('category', {
   name: Sequelize.STRING,
 });
 
