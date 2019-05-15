@@ -1,11 +1,11 @@
 import React, { Component } from 'react'; 
-import VendorCategoryFilter from '.VendorCategoryFilter';
-import VedorDaysFilter from '.VendorDaysFilter';
+import { getSingleVendor } from '../../services/vendorsService';
 
 class VendorUpdate extends Component {
   constructor() {
     super();
     this.state = {
+      id: '',   
       name: '',
       products: '',
       category: '',
@@ -18,6 +18,24 @@ class VendorUpdate extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  renderProducts() {
+    const products = this.state.products.split(", ");
+    products.map(product => console.log(product));
+  };
+
+  async componentDidMount() {
+    const id = await parseInt(this.props.id);
+    const data = await getSingleVendor(id);
+    this.setState({
+      id: data.vendor.id,
+      name: data.vendor.name,
+      products: data.vendor.products,
+      category: data.vendor.category,
+      days: data.vendor.days
+    })
+    this.renderProducts();
+  }
+  
   handleTextInput(e) {
     const fieldName = e.target.name;
     const value = e.target.value;
@@ -50,7 +68,7 @@ class VendorUpdate extends Component {
   handleSubmit(e) {
     e.preventDefault();
     let { name, products, category, days } = this.state;
-    updateVendor({ name, products, category, days });
+    //updateVendor({ name, products, category, days });
   };
 
   render () {
@@ -60,12 +78,9 @@ class VendorUpdate extends Component {
         <form className="vendor-update" onSubmit={this.handleSubmit}>
           <div>
             <label>Vendor Name</label>
-            <input type="text" name="name" onChange={this.handleTextInput} />
+            <input type="text" name="name" value={this.state.name} onChange={this.handleTextInput} />
             <label>Products List</label>
             <input type="text" name="products" onChange={this.handleTextInput} />
-          </div>
-          <div>
-            <VendorCategoryFilter handleDaySelect={this.handleDaySelect} />
           </div>
           <input type="submit" value="Submit" />
         </form>
