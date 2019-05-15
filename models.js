@@ -12,8 +12,15 @@ const db = new Sequelize({
 
 /* Model Definitions */
 const Vendor = db.define('vendor', {
-  name: Sequelize.STRING,
-  products: Sequelize.TEXT,
+  name: {
+    type: Sequelize.STRING,
+    unique: true,
+    allowNull: false,
+  },
+  products: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
 }, {
   timestamps: true,
 });
