@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Vendors from './components/Vendors/VendorsList';
 import VendorInfoForm from './components/VendorInfoForm/VendorInfoForm';
-import Maps from './components/Maps/MapsContainer';
+import Maps from './components/Maps/Maps';
 
 
 class App extends Component {

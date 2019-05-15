@@ -1,0 +1,39 @@
+/* .maps-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 800px;
+  justify-content: space-evenly;
+}
+*/
+.maps-container img {
+  width: 400px;
+  height: 500px;
+  justify-content: space-evenly;
+}
+
+.row-one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.map-label label {
+font-size: 38px;
+padding: 10px;
+}
