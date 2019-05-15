@@ -4,14 +4,16 @@ class SearchByProduct extends Component {
   render() {
     return (
       <div>
+        <div className="flex-wrapper">
         <form>
-          <label for='products'>Search By Product</label>
+          <label htmlFor='products'>Search By Product</label>
           <input
             type="text"
             name="search-products"
             placeholder="eggs, grains, jam"
           />
         </form>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
 h1 {
   margin: auto 0;
 }
@@ -9,6 +17,7 @@ h2 {
   font-family: "Fjalla One", sans-serif;
   color: #076d4d;
   text-decoration: underline;
+  padding: 25px;
 }
 
 img {
@@ -24,28 +33,26 @@ p {
 
 input {
   border: none;
+  width: 15em;
+  justify-content: center;
+  position: fixed;
+ 
 }
 
 label {
   font-family: "Fjalla One", sans-serif;
   color: #076d4d;
   margin-bottom: 20px;
-  display: block;
+  display: flex;
   font-size: 35px;
   height: 100%;
+  justify-content: center;
+
 }
 
-label,
-input {
-  display: inline-block;
-}
-
-.SearchByVendor {
-  display: center;
-}
-
-.SearchByProduct {
-  margin-top: px;
+label, input {
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -61,3 +68,5 @@ h3 {
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
 }
+
+
