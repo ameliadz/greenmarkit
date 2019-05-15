@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import { getSingleVendor } from '../../services/vendorsService';
+import VendorUpdateProducts from '../VendorUpdateProducts/VendorUpdateProducts';
 
 class VendorUpdate extends Component {
   constructor() {
@@ -16,12 +17,10 @@ class VendorUpdate extends Component {
     this.handleCategoryValue = this.handleCategoryValue.bind(this);
     this.HandleDaySelect = this.handleDaySelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteEntry = this.deleteEntry.bind(this);
   }
 
-  renderProducts() {
-    const products = this.state.products.split(", ");
-    products.map(product => console.log(product));
-  };
+
 
   async componentDidMount() {
     const id = await parseInt(this.props.id);
@@ -33,7 +32,6 @@ class VendorUpdate extends Component {
       category: data.vendor.category,
       days: data.vendor.days
     })
-    this.renderProducts();
   }
   
   handleTextInput(e) {
@@ -71,7 +69,15 @@ class VendorUpdate extends Component {
     //updateVendor({ name, products, category, days });
   };
 
+  deleteEntry(e) {
+    const productList = this.state.products.split(", ")
+    productList.splice(productList.indexOf(e.target.name), 1);
+    this.setState({ products: productList.join(', ')});
+  };
+
   render () {
+    const productList = this.state.products.split(", ").map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
+    console.log(productList);
     return (
       <div>
         <h1>Edit Vendor</h1>
@@ -84,6 +90,7 @@ class VendorUpdate extends Component {
           </div>
           <input type="submit" value="Submit" />
         </form>
+          {productList}
       </div>
     );
   };
