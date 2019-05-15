@@ -5,6 +5,7 @@ class SearchByProduct extends Component {
     return (
       <div>
         <form>
+          <label for='products'>Search By Product</label>
           <input
             type="text"
             name="search-products"
