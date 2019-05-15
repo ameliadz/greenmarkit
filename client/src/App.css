@@ -2,9 +2,7 @@
   text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
 body {
   background-image: url("https://i.imgur.com/32jDJWN.jpg");
@@ -14,29 +12,4 @@ body {
 
 }
 
-input {
-  border: none;
 
-}
-
-label {
-  font-family: 'Fjalla One', sans-serif;
-  color: #076D4D;
-  margin-bottom: 20px;
-  display: block;
-  font-size: 25px;
-  width: 100%;
-}
-
-label, input {
-  display: inline-block;
-
-}
-
-.SearchByVendor {
-  display: center;
-}
-
-.SearchByProduct {
-  margin-top: 20px;
-}
