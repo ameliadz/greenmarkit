@@ -4,41 +4,60 @@ h1 {
   margin: auto 0;
 }
 
+h2 {
+  font-size: 35px;
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  text-decoration: underline;
+}
+
 img {
   width: 400px;
   height: 155px;
 }
 
-/* p {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 25px;
-  color: #84182B;
-} */
+p {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 30px;
+  color: #076d4d;
+}
 
 input {
   border: none;
-  
 }
 
 label {
-  font-family: 'Fjalla One', sans-serif;
-  color: #076D4D;
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
   margin-bottom: 20px;
   display: block;
   font-size: 35px;
   height: 100%;
 }
 
-label, input {
+label,
+input {
   display: inline-block;
-  
 }
 
 .SearchByVendor {
   display: center;
-  
 }
 
 .SearchByProduct {
-  margin-top: 20px;
+  margin-top: px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #076d4d;
+}
+
+h3 {
+  color: #e0b564;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 20px;
 }
