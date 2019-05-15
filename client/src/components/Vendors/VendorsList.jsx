@@ -11,27 +11,24 @@ class VendorsList extends Component {
 
   async componentDidMount() {
     const vendors = await getVendors();
+    console.log(vendors);
     this.setState({vendors});
   }
 
-  renderVendors() {
-    const { vendors } = this.state;
-    vendors.map(vendor => {
-      return (
-        <div className="vendor-item" key={vendor.id}>
-          <h2>{vendor.name}</h2>
-          <p>Products: {vendor.products}</p>
-          <p>Category: {vendor.produce.name}</p>
-        </div>
-      )
-    })
-  }
-
   render() {
+    let { vendors } = this.state;
     return (
       <div>
         <h1>Vendors List</h1>
-        { this.state.vendors.length > 0 ? this.renderVendors() : null }
+        { vendors.map(vendor => {
+            return (
+              <div className="vendor-item" key={vendor.id}>
+                <h2>{vendor.name}</h2>
+                <p>Products: {vendor.products}</p>
+                <p>Category: {vendor.category.name}</p>
+              </div>
+            )
+          }) }
       </div>
     );
   }
