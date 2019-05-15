@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./VendorsList.css";
 import { getVendors } from '../../services/vendorsService';
 
 class VendorsList extends Component {
@@ -20,15 +21,19 @@ class VendorsList extends Component {
     return (
       <div>
         <h1>Vendors List</h1>
-        { vendors.map(vendor => {
-            return (
-              <div className="vendor-item" key={vendor.id}>
-                <h2>{vendor.name}</h2>
-                <p>Products: {vendor.products}</p>
-                <p>Category: {vendor.category.name}</p>
-              </div>
-            )
-          }) }
+        <div className="vendor-list">
+          { vendors.map(vendor => {
+              return (
+                <div className="vendor-item" key={vendor.id}>
+                  <h2>{vendor.name}</h2>
+                  <p>Products: {vendor.products}</p>
+                  <p>Category: {vendor.category.name}</p>
+                  <button type="button">Edit</button>
+                  <button type="button">Delete</button>
+                </div>
+              )
+            }) }
+          </div>
       </div>
     );
   }
