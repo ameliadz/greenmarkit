@@ -9,5 +9,10 @@ export const getVendors = async () => {
 
 export const createVendor = async (data) => {
   const vendor = await axios.post(`${BASE_URL}/vendors`, data);
-  console.log(vendor);
+  return vendor.data.vendor;
 };
+
+export const deleteVendor = async (id) => {
+  const vendor = await axios.delete(`${BASE_URL}/vendors/${id}`);
+  return vendor.data;
+}

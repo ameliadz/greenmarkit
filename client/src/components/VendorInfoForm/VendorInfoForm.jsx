@@ -11,7 +11,7 @@ class VendorInfoForm extends Component {
     this.state = {
       name: '',
       products: '',
-      produce: '',
+      category: '',
       days: [],
     };
 
@@ -25,12 +25,10 @@ class VendorInfoForm extends Component {
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({ [fieldName]: value });
-    //console.log(fieldName, value);
   };
 
   handleCategoryValue(e) {
-    this.setState({ produce: e.target.value });
-    console.log(typeof parseInt(e.target.value));
+    this.setState({ category: parseInt(e.target.value) });
   };
 
   handleDaySelect(e){
@@ -52,22 +50,11 @@ class VendorInfoForm extends Component {
     }
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
-    let { name, products, produce, days} = this.state;
-    // const newVendor = {
-    //   name: this.state.name,
-    //   products: this.state.products;
-    // const produce = this.state.produce;
-    // const days = this.state.days;
-    //const jsonProducts = JSON.stringify(products);
-    //console.log(jsonProducts);
-    //products = jsonProducts;
-    //console.log(name);
-    console.log(typeof products);
-    console.log(typeof produce);
-    //console.log(days);
-    createVendor({ name, products, produce, days});
+    let { name, products, category, days} = this.state;
+    const created = await createVendor({ name, products, category, days });
+    console.log(`created ${created.name}`);
   };
 
   render() {
