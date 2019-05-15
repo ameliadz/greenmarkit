@@ -1,11 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
-
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 h1 {
@@ -16,8 +14,8 @@ h2 {
   font-size: 35px;
   font-family: "Fjalla One", sans-serif;
   color: #076d4d;
-  text-decoration: underline;
   padding: 25px;
+  text-shadow: 0.5px 2px #e0b564;
 }
 
 img {
@@ -35,8 +33,7 @@ input {
   border: none;
   width: 15em;
   justify-content: center;
-  position: fixed;
- 
+  margin-left: 15%;
 }
 
 label {
@@ -45,12 +42,13 @@ label {
   margin-bottom: 20px;
   display: flex;
   font-size: 35px;
-  height: 100%;
+  height: 50%;
   justify-content: center;
-
+  text-shadow:.5px 2px #e0b564;
 }
 
-label, input {
+label,
+input {
   display: flex;
   justify-content: center;
 }
@@ -69,4 +67,12 @@ h3 {
   font-size: 20px;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.about {
+  text-shadow: 0.5px 2px #e0b564;
+}

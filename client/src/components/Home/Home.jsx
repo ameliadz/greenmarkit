@@ -13,7 +13,7 @@ class Home extends Component {
 
         <SearchContainer />
         <h2>About GreenMark!t</h2>
-        <p>
+        <p className="about">
           GreenMark!t is a place where Union Square producers can seamlessly
           share their products and services.
         </p>
