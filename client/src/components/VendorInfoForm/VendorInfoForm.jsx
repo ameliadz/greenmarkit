@@ -28,8 +28,7 @@ class VendorInfoForm extends Component {
   };
 
   handleCategoryValue(e) {
-    this.setState({ category: e.target.value });
-    console.log(typeof parseInt(e.target.value));
+    this.setState({ category: parseInt(e.target.value) });
   };
 
   handleDaySelect(e){
