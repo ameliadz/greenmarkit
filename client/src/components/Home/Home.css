@@ -5,8 +5,8 @@ h1 {
 }
 
 img {
-  width: 350px;
-  height: 145px;
+  width: 400px;
+  height: 155px;
 }
 
 /* p {
@@ -14,3 +14,31 @@ img {
   font-size: 25px;
   color: #84182B;
 } */
+
+input {
+  border: none;
+  
+}
+
+label {
+  font-family: 'Fjalla One', sans-serif;
+  color: #076D4D;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 35px;
+  height: 100%;
+}
+
+label, input {
+  display: inline-block;
+  
+}
+
+.SearchByVendor {
+  display: center;
+  
+}
+
+.SearchByProduct {
+  margin-top: 20px;
+}

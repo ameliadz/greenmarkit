@@ -14,29 +14,3 @@ body {
   
 }
 
-input {
-  border: none;
-  
-}
-
-label {
-  font-family: 'Fjalla One', sans-serif;
-  color: #076D4D;
-  margin-bottom: 20px;
-  display: block;
-  font-size: 25px;
-  width: 100%;
-}
-
-label, input {
-  display: inline-block;
-  
-}
-
-.SearchByVendor {
-  display: center;
-}
-
-.SearchByProduct {
-  margin-top: 20px;
-}
