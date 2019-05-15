@@ -11,12 +11,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: absolute;
-  
+
 }
 
 input {
   border: none;
-  
+
 }
 
 label {
@@ -30,7 +30,7 @@ label {
 
 label, input {
   display: inline-block;
-  
+
 }
 
 .SearchByVendor {
