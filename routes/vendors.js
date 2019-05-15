@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { Op } = require('sequelize');
+const { Sequelize, Op } = require('sequelize');
 const { Vendor, Day, Category } = require('../models');
 
 const vendorRouter = Router();
@@ -37,6 +37,7 @@ vendorRouter.get('/', async (request, response, next) => {
   try {
     const vendors = await Vendor.findAll({
       include: [Day, Category],
+      order: [[Sequelize.fn('lower', Sequelize.col('vendor.name')), 'ASC']],
     });
 
     response.json({ vendors });
@@ -69,7 +70,7 @@ vendorRouter.delete('/:id', async (request, response, next) => {
         id,
       },
     });
-    response.send(`${targetVendor.dataValues.name} has been deleted`);
+    response.json(targetVendor.dataValues);
   } catch (e) {
     next(e);
   }
