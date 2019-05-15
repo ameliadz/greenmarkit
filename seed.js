@@ -341,7 +341,7 @@ async function main() {
   });
 
   const luckyDogOrganics = await Vendor.create({
-    name: 'Luck Dog Organics',
+    name: 'Lucky Dog Organics',
     products: 'vegetables, goat dairy',
   });
 

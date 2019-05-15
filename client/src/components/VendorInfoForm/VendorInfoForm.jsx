@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './VendorInfoForm.css'
-import VendorProduceFilter from './VendorProduceFilter';
+import VendorCategoryFilter from './VendorCategoryFilter';
 import VendorDaysFilter from './VendorDaysFilter';
 
 import { createVendor } from '../../services/vendorsService';
@@ -16,7 +16,7 @@ class VendorInfoForm extends Component {
     };
 
     this.handleTextInput = this.handleTextInput.bind(this);
-    this.handleProduceValue = this.handleProduceValue.bind(this);
+    this.handleCategoryValue = this.handleCategoryValue.bind(this);
     this.handleDaySelect = this.handleDaySelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
@@ -25,10 +25,12 @@ class VendorInfoForm extends Component {
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({ [fieldName]: value });
+    //console.log(fieldName, value);
   };
 
-  handleProduceValue(e) {
+  handleCategoryValue(e) {
     this.setState({ produce: e.target.value });
+    console.log(typeof parseInt(e.target.value));
   };
 
   handleDaySelect(e){
@@ -52,12 +54,19 @@ class VendorInfoForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { name, products, produce, days} = this.state;
+    let { name, products, produce, days} = this.state;
     // const newVendor = {
     //   name: this.state.name,
     //   products: this.state.products;
     // const produce = this.state.produce;
     // const days = this.state.days;
+    //const jsonProducts = JSON.stringify(products);
+    //console.log(jsonProducts);
+    //products = jsonProducts;
+    //console.log(name);
+    console.log(typeof products);
+    console.log(typeof produce);
+    //console.log(days);
     createVendor({ name, products, produce, days});
   };
 
@@ -73,8 +82,8 @@ class VendorInfoForm extends Component {
             <input type="text" name="products" onChange={this.handleTextInput} />
           </div>
           <div className="filters">
-            <VendorProduceFilter
-              handleProduceValue={this.handleProduceValue} />
+            <VendorCategoryFilter
+              handleCategoryValue={this.handleCategoryValue} />
             <VendorDaysFilter
               handleDaySelect={this.handleDaySelect} />
           </div>
