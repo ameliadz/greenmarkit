@@ -11,7 +11,7 @@ class VendorInfoForm extends Component {
     this.state = {
       name: '',
       products: '',
-      produce: '',
+      category: '',
       days: [],
     };
 
@@ -25,11 +25,10 @@ class VendorInfoForm extends Component {
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({ [fieldName]: value });
-    //console.log(fieldName, value);
   };
 
   handleCategoryValue(e) {
-    this.setState({ produce: e.target.value });
+    this.setState({ category: e.target.value });
     console.log(typeof parseInt(e.target.value));
   };
 
@@ -54,20 +53,8 @@ class VendorInfoForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let { name, products, produce, days} = this.state;
-    // const newVendor = {
-    //   name: this.state.name,
-    //   products: this.state.products;
-    // const produce = this.state.produce;
-    // const days = this.state.days;
-    //const jsonProducts = JSON.stringify(products);
-    //console.log(jsonProducts);
-    //products = jsonProducts;
-    //console.log(name);
-    console.log(typeof products);
-    console.log(typeof produce);
-    //console.log(days);
-    createVendor({ name, products, produce, days});
+    let { name, products, category, days} = this.state;
+    createVendor({ name, products, category, days });
   };
 
   render() {
