@@ -1,4 +1,4 @@
-const { Vendor, Produce, Day } = require('./models.js');
+const { Vendor, Category, Day } = require('./models.js');
 
 async function main() {
   /* delete everything in the database */
@@ -6,7 +6,7 @@ async function main() {
     where: {},
   });
 
-  await Produce.destroy({
+  await Category.destroy({
     where: {},
   });
 
@@ -703,55 +703,55 @@ async function main() {
 
 
   /* add produce seed data */
-  const vegetableHerbs = await Produce.create({
+  const vegetableHerbs = await Category.create({
     name: 'Vegetables/Herbs'
   });
 
-  const fruitOrchard = await Produce.create({
+  const fruitOrchard = await Category.create({
     name: 'Fruit/Orchard'
   });
 
-  const livestock = await Produce.create({
+  const livestock = await Category.create({
     name: 'Livestock'
   });
 
-  const plantsFlowers = await Produce.create({
+  const plantsFlowers = await Category.create({
     name: 'Plants/Flowers'
   });
 
-  const bakerGrains = await Produce.create({
+  const bakerGrains = await Category.create({
     name: 'Baker/Grains'
   });
 
-  const fish = await Produce.create({
+  const fish = await Category.create({
     name: 'Fish'
   });
 
-  const honey = await Produce.create({
+  const honey = await Category.create({
     name: 'Honey'
   });
 
-  const dairyCheese = await Produce.create({
+  const dairyCheese = await Category.create({
     name: 'Dairy/Cheese'
   });
 
-  const eggsPoultry = await Produce.create({
+  const eggsPoultry = await Category.create({
     name: 'Eggs/Poultry'
   });
 
-  const mushrooms = await Produce.create({
+  const mushrooms = await Category.create({
     name: 'Mushrooms'
   });
 
-  const alcohol = await Produce.create({
+  const alcohol = await Category.create({
     name: 'Wine/Beer/Spirits'
   });
 
-  const mapleSyrup = await Produce.create({
+  const mapleSyrup = await Category.create({
     name: 'Maple Syrup'
   });
 
-  const jamsPicklesPreserves = await Produce.create({
+  const jamsPicklesPreserves = await Category.create({
     name: 'Jams/Pickles/Preserves'
   });
 
@@ -779,143 +779,143 @@ async function main() {
 
 
   /* add association data */
-  await spirits.setProduce(alcohol);
-  await alewife.setProduce(vegetableHerbs);
-  await americanSeafood.setProduce(fish);
-  await andrewsLocal.setProduce(honey);
-  await anthonyRoad.setProduce(alcohol);
-  await appleState.setProduce(honey);
-  await ardithMae.setProduce(dairyCheese);
-  await bakersBounty.setProduce(bakerGrains);
-  await bearCreekFarm.setProduce(plantsFlowers);
-  await berkshireBerries.setProduce(jamsPicklesPreserves);
-  await bethsFarmKitchen.setProduce(jamsPicklesPreserves);
-  await blueOysterCultivation.setProduce(mushrooms);
-  await bobolinkDairyBakery.setProduce(dairyCheese);
-  await bodySoulBakery.setProduce(bakerGrains);
-  await borgheseVineyard.setProduce(alcohol);
-  await breadAlone.setProduce(bakerGrains);
-  await breezyHillOrchard.setProduce(fruitOrchard);
-  await bulichMushrooms.setProduce(mushrooms);
-  await campoRosso.setProduce(vegetableHerbs);
-  await caradonnaFarm.setProduce(fruitOrchard);
-  await catoCornerFarm.setProduce(dairyCheese);
-  await catskillMerino.setProduce(livestock);
-  await centralValleyDairy.setProduce(dairyCheese);
-  await chateauRenaissance.setProduce(alcohol);
-  await cherryLaneFarm.setProduce(vegetableHerbs);
-  await citySaucery.setProduce(jamsPicklesPreserves);
-  await considerBardwellFarm.setProduce(dairyCheese);
-  await dattolicoOrganics.setProduce(vegetableHerbs);
-  await deepMountainMaple.setProduce(mapleSyrup);
-  await dipaolaTurkeyFarm.setProduce(eggsPoultry);
-  await dutchmillGarden.setProduce(plantsFlowers);
-  await eckertonHillFarm.setProduce(vegetableHerbs);
-  await fantasticGardens.setProduce(plantsFlowers);
-  await feistyAcresFarm.setProduce(eggsPoultry);
-  await fledgingCrowFarm.setProduce(vegetableHerbs);
-  await flyingPigsFarm.setProduce(livestock);
-  await francescasBakery.setProduce(bakerGrains);
-  await furnaceCreekFarm.setProduce(vegetableHerbs);
-  await gailsFarm.setProduce(dairyCheese);
-  await gopalFarm.setProduce(vegetableHerbs);
-  await gorzynskiOrneryFarm.setProduce(vegetableHerbs);
-  await grazinAngusAcres.setProduce(livestock);
-  await grazinDistillery.setProduce(alcohol);
-  await growNycGrainstand.setProduce(bakerGrains);
-  await growNycGrainstandGuest.setProduce(alcohol);
-  await hawthorneValleyFarm.setProduce(vegetableHerbs);
-  await hickoryLedges.setProduce(alcohol);
-  await hillrockEstateDistillery.setProduce(alcohol);
-  await hoeffnerFarms.setProduce(vegetableHerbs);
-  await holySchmitts.setProduce(jamsPicklesPreserves);
-  await hudsonValleyColdPress.setProduce(jamsPicklesPreserves);
-  await hudsonValleyDuck.setProduce(eggsPoultry);
-  await hudsonValleyOrganics.setProduce(vegetableHerbs);
-  await jamesDurrFlowers.setProduce(plantsFlowers);
-  await josephinesFeast.setProduce(jamsPicklesPreserves);
-  await keithsFarm.setProduce(vegetableHerbs);
-  await kernanFarms.setProduce(vegetableHerbs);
-  await kimcheeHarvest.setProduce(jamsPicklesPreserves);
-  await knollKrestFarm.setProduce(eggsPoultry);
-  await lanisFarm.setProduce(vegetableHerbs);
-  await lasDelicias.setProduce(bakerGrains);
-  await lavenderByTheBay.setProduce(plantsFlowers);
-  await locustGroveFarm.setProduce(fruitOrchard);
-  await lostBread.setProduce(bakerGrains);
-  await lowlandFarm.setProduce(livestock);
-  await luckyDogOrganics.setProduce(vegetableHerbs);
-  await lunaFamilyFarm.setProduce(plantsFlowers);
-  await lynnhavenGoatFarm.setProduce(dairyCheese);
-  await maduraFarm.setProduce(vegetableHerbs);
-  await martinsPretzels.setProduce(bakerGrains);
-  await maxCreekHatchery.setProduce(fish);
-  await migliorelliFarm.setProduce(vegetableHerbs);
-  await millportDairy.setProduce(dairyCheese);
-  await mountainSweetBerry.setProduce(vegetableHerbs);
-  await moxieRidgeCreamery.setProduce(dairyCheese);
-  await nemethBakery.setProduce(bakerGrains);
-  await northshireFarms.setProduce(vegetableHerbs);
-  await norwichMeadowsFarm.setProduce(vegetableHerbs);
-  await newYorkCiderCo.setProduce(alcohol);
-  await oakGrovePlantation.setProduce(vegetableHerbs);
-  await offTheWheat.setProduce(bakerGrains);
-  await orangeCountyDistillery.setProduce(alcohol);
-  await oleMotherHubbert.setProduce(dairyCheese);
-  await ourDailyBread.setProduce(bakerGrains);
-  await paintedGoat.setProduce(dairyCheese);
-  await paffenrothGarden.setProduce(vegetableHerbs);
-  await peddSeafood.setProduce(fish);
-  await petalPlantsFlowers.setProduce(plantsFlowers);
-  await phillipsFarms.setProduce(vegetableHerbs);
-  await puraVidaFisheries.setProduce(fish);
-  await quartonFarm.setProduce(vegetableHerbs);
-  await quattrosGameFarm.setProduce(eggsPoultry);
-  await raceFarm.setProduce(vegetableHerbs);
-  await rambleCreek.setProduce(eggsPoultry);
-  await ravenBoar.setProduce(livestock);
-  await riseRootFarm.setProduce(vegetableHerbs);
-  await riverGarden.setProduce(plantsFlowers);
-  await riverineRanch.setProduce(livestock);
-  await roamingAcres.setProduce(eggsPoultry);
-  await ronnybrookFarm.setProduce(dairyCheese);
-  await roseMeadowFarm.setProduce(plantsFlowers);
-  await rosehavenAlpacas.setProduce(livestock);
-  await rowByRowFarm.setProduce(vegetableHerbs);
-  await roxburyMountainMaple.setProduce(mapleSyrup);
-  await runnerStone.setProduce(bakerGrains);
-  await ssoProduce.setProduce(vegetableHerbs);
-  await samascottOrchards.setProduce(fruitOrchard);
-  await seatuckFishCompany.setProduce(fish);
-  await shannonBrookFarm.setProduce(livestock);
-  await sheWolfBakery.setProduce(bakerGrains);
-  await shushanValleyHydro.setProduce(vegetableHerbs);
-  await silvaOrchids.setProduce(plantsFlowers);
-  await stokesFarm.setProduce(vegetableHerbs);
-  await stonyMountainRanch.setProduce(livestock);
-  await sunFedBeef.setProduce(livestock);
-  await sycamoreFarms.setProduce(vegetableHerbs);
-  await tamarackHollowFarm.setProduce(vegetableHerbs);
-  await terhuneOrchards.setProduce(fruitOrchard);
-  await toigoOrchards.setProduce(fruitOrchard);
-  await tonjesFarmDairy.setProduce(dairyCheese);
-  await transgenerationalFarm.setProduce(vegetableHerbs);
-  await treeliciousOrchard.setProduce(fruitOrchard);
-  await tremblayApiaries.setProduce(honey);
-  await troncillitoFarms.setProduce(fruitOrchard);
-  await tweefonteinFarm.setProduce(vegetableHerbs);
-  await twoGuysFromWoodbridge.setProduce(vegetableHerbs);
-  await unionSquareGrassman.setProduce(vegetableHerbs);
-  await valleyShepherd.setProduce(dairyCheese);
-  await vanHoutenFarms.setProduce(plantsFlowers);
-  await violetHillFarm.setProduce(livestock);
-  await wildcraftFarm.setProduce(vegetableHerbs);
-  await wilklowOrchards.setProduce(fruitOrchard);
-  await willowWispOrganic.setProduce(vegetableHerbs);
-  await wildYarrow.setProduce(plantsFlowers);
-  await windfallFarms.setProduce(vegetableHerbs);
-  await woodHomesteadMaple.setProduce(mapleSyrup);
-  await yellowBellFarm.setProduce(eggsPoultry);
+  await spirits.setCategory(alcohol);
+  await alewife.setCategory(vegetableHerbs);
+  await americanSeafood.setCategory(fish);
+  await andrewsLocal.setCategory(honey);
+  await anthonyRoad.setCategory(alcohol);
+  await appleState.setCategory(honey);
+  await ardithMae.setCategory(dairyCheese);
+  await bakersBounty.setCategory(bakerGrains);
+  await bearCreekFarm.setCategory(plantsFlowers);
+  await berkshireBerries.setCategory(jamsPicklesPreserves);
+  await bethsFarmKitchen.setCategory(jamsPicklesPreserves);
+  await blueOysterCultivation.setCategory(mushrooms);
+  await bobolinkDairyBakery.setCategory(dairyCheese);
+  await bodySoulBakery.setCategory(bakerGrains);
+  await borgheseVineyard.setCategory(alcohol);
+  await breadAlone.setCategory(bakerGrains);
+  await breezyHillOrchard.setCategory(fruitOrchard);
+  await bulichMushrooms.setCategory(mushrooms);
+  await campoRosso.setCategory(vegetableHerbs);
+  await caradonnaFarm.setCategory(fruitOrchard);
+  await catoCornerFarm.setCategory(dairyCheese);
+  await catskillMerino.setCategory(livestock);
+  await centralValleyDairy.setCategory(dairyCheese);
+  await chateauRenaissance.setCategory(alcohol);
+  await cherryLaneFarm.setCategory(vegetableHerbs);
+  await citySaucery.setCategory(jamsPicklesPreserves);
+  await considerBardwellFarm.setCategory(dairyCheese);
+  await dattolicoOrganics.setCategory(vegetableHerbs);
+  await deepMountainMaple.setCategory(mapleSyrup);
+  await dipaolaTurkeyFarm.setCategory(eggsPoultry);
+  await dutchmillGarden.setCategory(plantsFlowers);
+  await eckertonHillFarm.setCategory(vegetableHerbs);
+  await fantasticGardens.setCategory(plantsFlowers);
+  await feistyAcresFarm.setCategory(eggsPoultry);
+  await fledgingCrowFarm.setCategory(vegetableHerbs);
+  await flyingPigsFarm.setCategory(livestock);
+  await francescasBakery.setCategory(bakerGrains);
+  await furnaceCreekFarm.setCategory(vegetableHerbs);
+  await gailsFarm.setCategory(dairyCheese);
+  await gopalFarm.setCategory(vegetableHerbs);
+  await gorzynskiOrneryFarm.setCategory(vegetableHerbs);
+  await grazinAngusAcres.setCategory(livestock);
+  await grazinDistillery.setCategory(alcohol);
+  await growNycGrainstand.setCategory(bakerGrains);
+  await growNycGrainstandGuest.setCategory(alcohol);
+  await hawthorneValleyFarm.setCategory(vegetableHerbs);
+  await hickoryLedges.setCategory(alcohol);
+  await hillrockEstateDistillery.setCategory(alcohol);
+  await hoeffnerFarms.setCategory(vegetableHerbs);
+  await holySchmitts.setCategory(jamsPicklesPreserves);
+  await hudsonValleyColdPress.setCategory(jamsPicklesPreserves);
+  await hudsonValleyDuck.setCategory(eggsPoultry);
+  await hudsonValleyOrganics.setCategory(vegetableHerbs);
+  await jamesDurrFlowers.setCategory(plantsFlowers);
+  await josephinesFeast.setCategory(jamsPicklesPreserves);
+  await keithsFarm.setCategory(vegetableHerbs);
+  await kernanFarms.setCategory(vegetableHerbs);
+  await kimcheeHarvest.setCategory(jamsPicklesPreserves);
+  await knollKrestFarm.setCategory(eggsPoultry);
+  await lanisFarm.setCategory(vegetableHerbs);
+  await lasDelicias.setCategory(bakerGrains);
+  await lavenderByTheBay.setCategory(plantsFlowers);
+  await locustGroveFarm.setCategory(fruitOrchard);
+  await lostBread.setCategory(bakerGrains);
+  await lowlandFarm.setCategory(livestock);
+  await luckyDogOrganics.setCategory(vegetableHerbs);
+  await lunaFamilyFarm.setCategory(plantsFlowers);
+  await lynnhavenGoatFarm.setCategory(dairyCheese);
+  await maduraFarm.setCategory(vegetableHerbs);
+  await martinsPretzels.setCategory(bakerGrains);
+  await maxCreekHatchery.setCategory(fish);
+  await migliorelliFarm.setCategory(vegetableHerbs);
+  await millportDairy.setCategory(dairyCheese);
+  await mountainSweetBerry.setCategory(vegetableHerbs);
+  await moxieRidgeCreamery.setCategory(dairyCheese);
+  await nemethBakery.setCategory(bakerGrains);
+  await northshireFarms.setCategory(vegetableHerbs);
+  await norwichMeadowsFarm.setCategory(vegetableHerbs);
+  await newYorkCiderCo.setCategory(alcohol);
+  await oakGrovePlantation.setCategory(vegetableHerbs);
+  await offTheWheat.setCategory(bakerGrains);
+  await orangeCountyDistillery.setCategory(alcohol);
+  await oleMotherHubbert.setCategory(dairyCheese);
+  await ourDailyBread.setCategory(bakerGrains);
+  await paintedGoat.setCategory(dairyCheese);
+  await paffenrothGarden.setCategory(vegetableHerbs);
+  await peddSeafood.setCategory(fish);
+  await petalPlantsFlowers.setCategory(plantsFlowers);
+  await phillipsFarms.setCategory(vegetableHerbs);
+  await puraVidaFisheries.setCategory(fish);
+  await quartonFarm.setCategory(vegetableHerbs);
+  await quattrosGameFarm.setCategory(eggsPoultry);
+  await raceFarm.setCategory(vegetableHerbs);
+  await rambleCreek.setCategory(eggsPoultry);
+  await ravenBoar.setCategory(livestock);
+  await riseRootFarm.setCategory(vegetableHerbs);
+  await riverGarden.setCategory(plantsFlowers);
+  await riverineRanch.setCategory(livestock);
+  await roamingAcres.setCategory(eggsPoultry);
+  await ronnybrookFarm.setCategory(dairyCheese);
+  await roseMeadowFarm.setCategory(plantsFlowers);
+  await rosehavenAlpacas.setCategory(livestock);
+  await rowByRowFarm.setCategory(vegetableHerbs);
+  await roxburyMountainMaple.setCategory(mapleSyrup);
+  await runnerStone.setCategory(bakerGrains);
+  await ssoProduce.setCategory(vegetableHerbs);
+  await samascottOrchards.setCategory(fruitOrchard);
+  await seatuckFishCompany.setCategory(fish);
+  await shannonBrookFarm.setCategory(livestock);
+  await sheWolfBakery.setCategory(bakerGrains);
+  await shushanValleyHydro.setCategory(vegetableHerbs);
+  await silvaOrchids.setCategory(plantsFlowers);
+  await stokesFarm.setCategory(vegetableHerbs);
+  await stonyMountainRanch.setCategory(livestock);
+  await sunFedBeef.setCategory(livestock);
+  await sycamoreFarms.setCategory(vegetableHerbs);
+  await tamarackHollowFarm.setCategory(vegetableHerbs);
+  await terhuneOrchards.setCategory(fruitOrchard);
+  await toigoOrchards.setCategory(fruitOrchard);
+  await tonjesFarmDairy.setCategory(dairyCheese);
+  await transgenerationalFarm.setCategory(vegetableHerbs);
+  await treeliciousOrchard.setCategory(fruitOrchard);
+  await tremblayApiaries.setCategory(honey);
+  await troncillitoFarms.setCategory(fruitOrchard);
+  await tweefonteinFarm.setCategory(vegetableHerbs);
+  await twoGuysFromWoodbridge.setCategory(vegetableHerbs);
+  await unionSquareGrassman.setCategory(vegetableHerbs);
+  await valleyShepherd.setCategory(dairyCheese);
+  await vanHoutenFarms.setCategory(plantsFlowers);
+  await violetHillFarm.setCategory(livestock);
+  await wildcraftFarm.setCategory(vegetableHerbs);
+  await wilklowOrchards.setCategory(fruitOrchard);
+  await willowWispOrganic.setCategory(vegetableHerbs);
+  await wildYarrow.setCategory(plantsFlowers);
+  await windfallFarms.setCategory(vegetableHerbs);
+  await woodHomesteadMaple.setCategory(mapleSyrup);
+  await yellowBellFarm.setCategory(eggsPoultry);
 
 
 
@@ -1056,7 +1056,6 @@ async function main() {
   await windfallFarms.addDays([wednesday, saturday]);
   await woodHomesteadMaple.addDay(saturday);
   await yellowBellFarm.addDay(wednesday);
-
 }
 
 async function seed() {

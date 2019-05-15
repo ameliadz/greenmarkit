@@ -18,7 +18,7 @@ const Vendor = db.define('vendor', {
   timestamps: true,
 });
 
-const Produce = db.define('produce', {
+const Category = db.define('produce', {
   name: Sequelize.STRING,
 });
 
@@ -27,9 +27,9 @@ const Day = db.define('day', {
 });
 
 /* Model Associations */
-Vendor.belongsTo(Produce);
+Vendor.belongsTo(Category);
 
-Produce.hasMany(Vendor);
+Category.hasMany(Vendor);
 
 Vendor.belongsToMany(Day, {
   through: 'schedule',
@@ -44,6 +44,6 @@ Day.belongsToMany(Vendor, {
 module.exports = {
   db,
   Vendor,
-  Produce,
+  Category,
   Day,
 };
