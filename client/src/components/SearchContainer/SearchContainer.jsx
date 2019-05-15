@@ -5,7 +5,7 @@ import SearchByVendor from "../SearchContainer/SearchByVendor"
 class SearchContainer extends Component {
   render() {
     return (
-      <div className= {'searchWrapper'}>
+      <div>
         <SearchByVendor />
         <SearchByProduct />
       </div>

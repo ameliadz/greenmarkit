@@ -13,18 +13,24 @@ body {
   
 }
 
-.searchWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 10em;
-}
-.searchWrapper div form input{
-  width: 20em;
+input {
+  border: none;
+  
 }
 
-.searchWrapper div form p{
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+label {
+  font-family: 'Fjalla One', sans-serif;
+  color: #076D4D;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 25px;
+}
+
+label, input {
+  display: inline-block;
+  
+}
+
+.SearchByVendor {
+  display: center;
 }

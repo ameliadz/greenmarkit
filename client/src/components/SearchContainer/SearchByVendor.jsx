@@ -4,9 +4,8 @@ class SearchByName extends Component {
   render() {
     return (
       <div>
-
         <form>
-          <p>Search by Vendor</p>
+          <label for="names">Search By Vendor</label>
           <input
             type="text"
             name="search-names"
