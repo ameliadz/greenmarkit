@@ -1,16 +1,78 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 h1 {
   margin: auto 0;
 }
 
-img {
-  width: 350px;
-  height: 145px;
+h2 {
+  font-size: 35px;
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  padding: 25px;
+  text-shadow: 0.5px 2px #e0b564;
 }
 
-/* p {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 25px;
-  color: #84182B;
-} */
+img {
+  width: 400px;
+  height: 155px;
+}
+
+p {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 30px;
+  color: #076d4d;
+}
+
+input {
+  border: none;
+  width: 15em;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+label {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 35px;
+  height: 50%;
+  justify-content: center;
+  text-shadow:.5px 2px #e0b564;
+}
+
+label,
+input {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #076d4d;
+}
+
+h3 {
+  color: #e0b564;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about {
+  text-shadow: 0.5px 2px #e0b564;
+}

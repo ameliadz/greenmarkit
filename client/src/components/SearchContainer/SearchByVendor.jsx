@@ -4,6 +4,7 @@ class SearchByName extends Component {
   render() {
     return (
       <div>
+        <div className="flex-wrapper">
         <form>
           <label htmlFor="names">Search By Vendor</label>
           <input
@@ -12,6 +13,7 @@ class SearchByName extends Component {
             placeholder="Bread Alone, Kimchee Harvest"
           />
         </form>
+        </div>
       </div>
     );
   }
