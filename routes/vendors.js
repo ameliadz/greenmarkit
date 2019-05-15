@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { Op } = require('sequelize');
-const { Vendor, Day, Produce } = require('../models');
+const { Vendor, Day, Category } = require('../models');
 
 const vendorRouter = Router();
 
@@ -12,7 +12,7 @@ vendorRouter.post('/', async (request, response, next) => {
       name: request.body.name,
       products: request.body.products,
     });
-    await vendor.setProduce(request.body.produce);
+    await vendor.setCategory(request.body.category);
     await vendor.addDays(request.body.days);
     response.json({ vendor });
   } catch (e) {
@@ -36,7 +36,7 @@ vendorRouter.put('/:id', async (request, response, next) => {
 vendorRouter.get('/', async (request, response, next) => {
   try {
     const vendors = await Vendor.findAll({
-      include: [Day, Produce],
+      include: [Day, Category],
     });
 
     response.json({ vendors });
@@ -50,7 +50,7 @@ vendorRouter.get('/:id', async (request, response, next) => {
   try {
     const { id } = request.params;
     const vendor = await Vendor.findByPk(id, {
-      include: [Day, Produce],
+      include: [Day, Category],
     });
     response.json({ vendor });
   } catch (e) {
