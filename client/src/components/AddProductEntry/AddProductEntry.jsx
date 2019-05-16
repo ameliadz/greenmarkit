@@ -5,9 +5,10 @@ function AddProductEntry(props) {
     return (
       <div>
         <form onSubmit={(e) => {
-          e.preventDefault()
-          props.setProducts({products: props.state.products + ', ' + props.state.newProduct})
-          props.renderProductList()
+          e.preventDefault();
+          props.setProducts({products: props.state.products + ', ' + props.state.newProduct});
+          props.renderProductList();
+          props.handleAdd();
         }}> 
           <label>Enter Product</label>
           <input 

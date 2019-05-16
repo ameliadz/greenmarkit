@@ -12,7 +12,7 @@ class VendorUpdate extends Component {
       products: '',
       category: '',
       days: [],
-      addEntry: true,
+      addEntry: false,
       newProduct: '',
     };
 
@@ -116,7 +116,7 @@ class VendorUpdate extends Component {
         <AddProductEntry 
           state={this.state}
           addEntry={this.state.addEntry} 
-          handleAdd={this.state.handleAdd} 
+          handleAdd={this.handleAdd} 
           handleTextInput={this.handleTextInput}
           renderProductList={this.renderProductList}
           setProducts={this.setProducts}
