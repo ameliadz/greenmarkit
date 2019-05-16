@@ -6,7 +6,7 @@ class SearchByName extends Component {
       <div>
         <div className="flex-wrapper">
         <form>
-          <label htmlFor="names">Search By Vendor</label>
+          <label htmlFor="names">Search By Producer</label>
           <input
             type="text"
             name="search-names"

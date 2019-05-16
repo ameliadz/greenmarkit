@@ -16,7 +16,7 @@ const Header = () => {
           to={"/vendors"}
           style={{ textDecoration: "none", color: "#E0B564", fontSize: "18px" }}
         >
-          All Vendors
+          All Producers
         </Link>
         <Link
           to={"/maps"}
@@ -28,7 +28,7 @@ const Header = () => {
           to={"/vendors/create"}
           style={{ textDecoration: "none", color: "#E0B564", fontSize: "18px" }}
         >
-          Become a Vendor
+          Become a Producer
         </Link>
         {/* Login will be a dropdown */}
         {/* <Link to={'/vendor/login'}>Login</Link> */}

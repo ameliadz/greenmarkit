@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import "./VendorsList.css";
-import { getVendors, deleteVendor } from '../../services/vendorsService';
+import { getVendors, deleteVendor } from "../../services/vendorsService";
 
 class VendorsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       vendors: []
-    }
+    };
     this.delete = this.delete.bind(this);
   }
 
   async componentDidMount() {
     const vendors = await getVendors();
     console.log(vendors);
-    this.setState({vendors});
+    this.setState({ vendors });
   }
 
   async delete(id) {
@@ -30,21 +30,22 @@ class VendorsList extends Component {
   render() {
     let { vendors } = this.state;
     return (
-      <div>
-        <h1>Vendors List</h1>
+      <div className="vendors">
+        <h1>Producer List</h1>
         <div className="vendor-list">
-          { vendors.map(vendor => {
-              return (
-                <div className="vendor-item" key={vendor.id}>
-                  <h2>{vendor.name}</h2>
-                  <p>Products: {vendor.products}</p>
-                  <p>Category: {vendor.category.name}</p>
-                  <button type="button">Edit</button>
-                  <button type="button" onClick={() => this.delete(vendor.id)}>Delete</button>
-                </div>
-              )
-            }) }
-          </div>
+          {vendors.map(vendor => {
+            return (
+              <div className="vendor-item" key={vendor.id}>
+                <h2>{vendor.name}</h2> <br />
+                <p>Products: {vendor.products}</p> <br />
+                <button type="button">Edit</button>
+                <button type="button" onClick={() => this.delete(vendor.id)}>
+                  Delete
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

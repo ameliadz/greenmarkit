@@ -67,7 +67,7 @@ input {
   font-size: 20px;
 }
 
-.home form {
+.home  form {
   display: flex;
   justify-content: center;
   flex-direction: column;

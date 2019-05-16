@@ -18,7 +18,7 @@ class Home extends Component {
           share their products and services.
         </p>
         <footer>
-          <h3>GreenMark!t &#169; Circa: 2019</h3>
+          <h3>GreenMark!t &#169; 2019</h3>
         </footer>
       </div>
     );
