@@ -54,7 +54,6 @@ class VendorInfoForm extends Component {
     e.preventDefault();
     let { name, products, category, days} = this.state;
     const created = await createVendor({ name, products, category, days });
-    console.log(`created ${created.name}`);
   };
 
   render() {

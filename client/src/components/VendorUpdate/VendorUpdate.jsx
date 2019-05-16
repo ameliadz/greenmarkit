@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { getSingleVendor, updateVendor } from '../../services/vendorsService';
 import VendorUpdateProducts from '../VendorUpdateProducts/VendorUpdateProducts';
 import AddProductEntry from '../AddProductEntry/AddProductEntry';
+import VendorCategoryFilter from '../VendorInfoForm/VendorCategoryFilter';
+import VendorDaysFilter from '../VendorInfoForm/VendorDaysFilter';
 
 class VendorUpdate extends Component {
   constructor() {
@@ -73,14 +75,7 @@ class VendorUpdate extends Component {
   async handleSubmit(e) {
     e.preventDefault();
     let { id, name, products, category, days } = this.state;
-    console.log('name', name)
-    console.log('products', products)
-    console.log('category', category)
-    console.log('days', days)
-
     const updated = await updateVendor({ id, name, products, category, days});
-    
-    console.log(`${updated.name} has been updated`);
   };
 
   deleteEntry(e) {
@@ -91,7 +86,6 @@ class VendorUpdate extends Component {
 
   handleAdd(e) {
     this.setState({ addEntry: !this.state.addEntry });
-    console.log(this.state.newProduct);
   };
 
   handleSubmitAddProduct() {
@@ -102,8 +96,6 @@ class VendorUpdate extends Component {
   };
 
   renderProductList() {
-    console.log(this.state.products)
-    console.log('products rendered')
     return this.state.products.split(", ")
       .map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
  
@@ -117,6 +109,10 @@ class VendorUpdate extends Component {
           <div>
             <label>Vendor Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleTextInput} />
+          </div>
+          <div>
+            <VendorCategoryFilter handleCategoryValue={this.handleCategoryValue} />
+            <VendorDaysFilter handleDaysSelect={this.handleDaySelect} />
           </div>
           <input type="submit" value="Submit" />
         </form>
