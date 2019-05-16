@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import Vendors from './components/Vendors/VendorsList';
 import VendorInfoForm from './components/VendorInfoForm/VendorInfoForm';
 import Maps from './components/Maps/Maps';
+import VendorUpdate from './components/VendorUpdate/VendorUpdate';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/vendors" component={Vendors} />
           <Route exact path="/maps" component={Maps} />
           <Route exact path="/vendors/create" component={VendorInfoForm} />
+          <Route exact path="/vendors/edit/:id" component={VendorUpdate} />
         </Switch>
       </div>
     );
