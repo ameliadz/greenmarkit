@@ -4,7 +4,11 @@ function AddProductEntry(props) {
   if (props.addEntry === true ) {
     return (
       <div>
-        <form>
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          props.setProducts({products: props.state.products + ', ' + props.state.newProduct})
+          props.renderProductList()
+        }}> 
           <label>Enter Product</label>
           <input 
             onChange={props.handleTextInput}
@@ -13,8 +17,7 @@ function AddProductEntry(props) {
             value={props.state.newProduct}
           />
           <input 
-            type="button" 
-            onClick={() => console.log('product added')} 
+            type="submit" 
             value="Add"
           />
         </form>

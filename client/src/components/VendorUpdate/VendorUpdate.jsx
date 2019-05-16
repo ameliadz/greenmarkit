@@ -12,7 +12,7 @@ class VendorUpdate extends Component {
       products: '',
       category: '',
       days: [],
-      addEntry: false,
+      addEntry: true,
       newProduct: '',
     };
 
@@ -22,24 +22,26 @@ class VendorUpdate extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.deleteEntry = this.deleteEntry.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
+    this.setProducts = this.setProducts.bind(this);
   }
 
-
+  setProducts(data) {
+    this.setState({
+      id: data.id,
+      name: data.name,
+      products: data.products,
+      category: data.category,
+      days: data.days
+    })
+  }
 
   async componentDidMount() {
     const id = await parseInt(this.props.id);
     const data = await getSingleVendor(id);
-    this.setState({
-      id: data.vendor.id,
-      name: data.vendor.name,
-      products: data.vendor.products,
-      category: data.vendor.category,
-      days: data.vendor.days
-    })
+    await this.setProducts(data.vendor)
   }
   
   handleTextInput(e) {
-    console.log(e.target.value)
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({ [fieldName]: value });
@@ -85,8 +87,22 @@ class VendorUpdate extends Component {
     console.log(this.state.newProduct);
   };
 
+  handleSubmitAddProduct() {
+    const newList = this.state.products + ', ' + this.state.newProduct;
+    this.setState({
+      products: newList
+    });
+  };
+
+  renderProductList() {
+    console.log(this.state.products)
+    console.log('products rendered')
+    return this.state.products.split(", ")
+      .map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
+ 
+  }
+
   render () {
-    const productList = this.state.products.split(", ").map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
     return (
       <div>
         <h1>Edit Vendor</h1>
@@ -102,8 +118,10 @@ class VendorUpdate extends Component {
           addEntry={this.state.addEntry} 
           handleAdd={this.state.handleAdd} 
           handleTextInput={this.handleTextInput}
+          renderProductList={this.renderProductList}
+          setProducts={this.setProducts}
         />
-          {productList}
+          {this.renderProductList()}
         <input id="addButton" type="button" value="Add Product" onClick={this.handleAdd} />
       </div>
     );
