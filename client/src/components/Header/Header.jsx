@@ -25,7 +25,7 @@ const Header = () => {
           Market Map
         </Link>
         <Link
-          to={"/vendors/create"}
+          to={"/create"}
           style={{ textDecoration: "none", color: "#E0B564", fontSize: "18px" }}
         >
           Become a Producer
