@@ -8,3 +8,26 @@
   display: flex;
   justify-content: center;
 }
+
+.info h1 {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  font-size: 50px;
+  text-shadow: 0.5px 2px #e0b564;
+}
+
+.info label {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  font-size: 25px;
+}
+
+.days-filter div {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.submit-button input {
+  justify-content: center;
+}
