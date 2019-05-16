@@ -58,11 +58,12 @@ class VendorInfoForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Vendor Information</h1>
+      
+      <div className="info">
+        <h1>Producer Information</h1>
         <form className="vendor-form" onSubmit={this.handleSubmit}>
           <div className="basic-info">
-            <label>Vendor Name</label>
+            <label>Producer Name</label>
             <input type="text" name="name" onChange={this.handleTextInput} />
             <label>Products List</label>
             <input type="text" name="products" onChange={this.handleTextInput} />
@@ -73,9 +74,10 @@ class VendorInfoForm extends Component {
             <VendorDaysFilter
               handleDaySelect={this.handleDaySelect} />
           </div>
-          <input type="submit" value="Submit" />
+          <input className="submit-button" type="submit" value="Submit" />
         </form>
       </div>
+      
     );
   }
 }
