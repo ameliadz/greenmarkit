@@ -22,7 +22,7 @@ class VendorsList extends Component {
     console.log(id);
     const vendor = await deleteVendor(id);
     console.log(`deleted ${vendor.name}`);
-    const { vendors } = this.state;
+    const vendors = await getVendors();
     vendors.splice(vendors.indexOf(vendor), 1);
     this.setState({ vendors });
     // why isn't this making the vendor list refresh :(
