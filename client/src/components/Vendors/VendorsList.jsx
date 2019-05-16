@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./VendorsList.css";
 import { getVendors, deleteVendor } from "../../services/vendorsService";
+import VendorItem from './VendorItem';
 
 class VendorsList extends Component {
   constructor(props) {
@@ -33,18 +34,7 @@ class VendorsList extends Component {
       <div className="vendors">
         <h1>Producer List</h1>
         <div className="vendor-list">
-          {vendors.map(vendor => {
-            return (
-              <div className="vendor-item" key={vendor.id}>
-                <h2>{vendor.name}</h2> <br />
-                <p>Products: {vendor.products}</p> <br />
-                <button type="button">Edit</button>
-                <button type="button" onClick={() => this.delete(vendor.id)}>
-                  Delete
-                </button>
-              </div>
-            );
-          })}
+          {vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} />)}
         </div>
       </div>
     );
