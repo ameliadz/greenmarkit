@@ -25,9 +25,19 @@
 .days-filter div {
   display: flex;
   flex-wrap: wrap;
-  
+  padding-top: 40px;
+  padding-right: 225px;
 }
 
-.submit-button input {
+.submit-button {
   justify-content: center;
 }
+
+.products-dropdown {
+  display: flex;
+  
+  justify-content: center;
+  padding-left: 300px;
+}
+
+

@@ -11,21 +11,23 @@
 
 .vendor-item {
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .vendor-item h2 {
   margin: 0;
+  font-family: "Fjalla One", sans-serif;
 }
 
 .vendor-item p {
   margin: 0;
+  padding-top: 15px
 }
 
 .vendors h1 {
-  color: #2FA51A ;
-  text-shadow: 0.5px 2px #076D4D;
-  font-size: 45px;
+  color: #076D4D ;
+  text-shadow: 0.5px 2px #e0b564;
+  font-size: 50px;
 }
 
 .vendors p {
@@ -45,3 +47,19 @@
   background-color:#84182B;
   border-color: #076D4D;
 }
+
+.vendor-item ul {
+  list-style-type: none;
+  padding-right: 40px;
+  font-family: "Fjalla One", sans-serif;
+  color: #84182B;
+  font-size: 18px;
+}
+
+.vendor-item h3 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 18px;
+  color: #84182B
+}
+
+
