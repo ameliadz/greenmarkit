@@ -13,11 +13,12 @@ class VendorUpdate extends Component {
       category: '',
       days: [],
       addEntry: false,
+      newProduct: '',
     };
 
     this.handleTextInput = this.handleTextInput.bind(this);
     this.handleCategoryValue = this.handleCategoryValue.bind(this);
-    this.HandleDaySelect = this.handleDaySelect.bind(this);
+    this.handleDaySelect = this.handleDaySelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.deleteEntry = this.deleteEntry.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
@@ -38,6 +39,7 @@ class VendorUpdate extends Component {
   }
   
   handleTextInput(e) {
+    console.log(e.target.value)
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({ [fieldName]: value });
@@ -80,11 +82,11 @@ class VendorUpdate extends Component {
 
   handleAdd(e) {
     this.setState({ addEntry: !this.state.addEntry });
+    console.log(this.state.newProduct);
   };
 
   render () {
     const productList = this.state.products.split(", ").map(product => <VendorUpdateProducts product={product} key={product.id} deleteEntry={this.deleteEntry}/>);
-    console.log(productList);
     return (
       <div>
         <h1>Edit Vendor</h1>
@@ -95,7 +97,12 @@ class VendorUpdate extends Component {
           </div>
           <input type="submit" value="Submit" />
         </form>
-        <AddProductEntry addEntry={this.state.addEntry} handleAdd={this.state.handleAdd} />
+        <AddProductEntry 
+          state={this.state}
+          addEntry={this.state.addEntry} 
+          handleAdd={this.state.handleAdd} 
+          handleTextInput={this.handleTextInput}
+        />
           {productList}
         <input id="addButton" type="button" value="Add Product" onClick={this.handleAdd} />
       </div>

@@ -6,7 +6,12 @@ function AddProductEntry(props) {
       <div>
         <form>
           <label>Enter Product</label>
-          <input type="text" name="product" />
+          <input 
+            onChange={props.handleTextInput}
+            type="text" 
+            name="newProduct" 
+            value={props.state.newProduct}
+          />
           <input 
             type="button" 
             onClick={() => console.log('product added')} 
