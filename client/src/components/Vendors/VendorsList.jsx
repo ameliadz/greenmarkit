@@ -15,7 +15,6 @@ class VendorsList extends Component {
 
   async componentDidMount() {
     const vendors = await getVendors();
-    console.log(vendors);
     this.setState({ vendors });
   }
 
@@ -26,10 +25,6 @@ class VendorsList extends Component {
     const vendors = await getVendors();
     vendors.splice(vendors.indexOf(vendor), 1);
     this.setState({ vendors });
-  }
-
-  renderVendors(vendors) {
-    return vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete} />)
   }
 
   render() {
