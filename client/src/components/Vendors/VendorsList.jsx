@@ -7,7 +7,8 @@ class VendorsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      vendors: []
+      vendors: [],
+      redirect: false
     };
     this.delete = this.delete.bind(this);
   }
@@ -25,7 +26,10 @@ class VendorsList extends Component {
     const vendors = await getVendors();
     vendors.splice(vendors.indexOf(vendor), 1);
     this.setState({ vendors });
-    // why isn't this making the vendor list refresh :(
+  }
+
+  renderVendors(vendors) {
+    return vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete} />)
   }
 
   render() {
@@ -34,7 +38,7 @@ class VendorsList extends Component {
       <div className="vendors">
         <h1>Producer List</h1>
         <div className="vendor-list">
-          {vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete}/>)}
+          {vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete} />)}
         </div>
       </div>
     );
