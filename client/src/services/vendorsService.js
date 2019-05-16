@@ -17,6 +17,12 @@ export const createVendor = async (data) => {
   return vendor.data.vendor;
 };
 
+export const updateVendor = async (data) => {
+  console.log(data)
+  const vendor = await axios.put(`${BASE_URL}/vendors/${data.id}`, data);
+  return vendor.data.vendor;
+};
+
 export const deleteVendor = async (id) => {
   const vendor = await axios.delete(`${BASE_URL}/vendors/${id}`);
   return vendor.data;

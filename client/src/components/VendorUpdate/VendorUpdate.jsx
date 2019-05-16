@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { getSingleVendor } from '../../services/vendorsService';
+import { getSingleVendor, updateVendor } from '../../services/vendorsService';
 import VendorUpdateProducts from '../VendorUpdateProducts/VendorUpdateProducts';
 import AddProductEntry from '../AddProductEntry/AddProductEntry';
 
@@ -70,12 +70,17 @@ class VendorUpdate extends Component {
     }
   };
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
-    let { name, products, category, days } = this.state;
-    //updateVendor({ name, products, category, days });
-    console.log('submitted')
-    console.log(this.state)
+    let { id, name, products, category, days } = this.state;
+    console.log('name', name)
+    console.log('products', products)
+    console.log('category', category)
+    console.log('days', days)
+
+    const updated = await updateVendor({ id, name, products, category, days});
+    
+    console.log(`${updated.name} has been updated`);
   };
 
   deleteEntry(e) {
