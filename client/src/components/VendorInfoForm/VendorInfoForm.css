@@ -22,22 +22,37 @@
   font-size: 25px;
 }
 
-.days-filter div {
+/* .days-filter div {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-top: 40px;
   padding-right: 225px;
-}
+} */
 
 .submit-button {
   justify-content: center;
 }
 
-.products-dropdown {
+/* .products-dropdown {
   display: flex;
-  
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-left: 300px;
+} */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 
