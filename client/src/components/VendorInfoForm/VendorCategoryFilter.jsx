@@ -6,7 +6,7 @@ class VendorCategoryFilter extends Component {
       <div className="products-dropdown">
         <label htmlFor="category"><strong>Category</strong></label>
         <select name="category" required onChange={this.props.handleCategoryValue}>
-          <option value="null">Select a category</option>
+          <option value="">Select a category</option>
           <option value="1">Vegetable/Herbs</option>
           <option value="2">Fruit/Orchard</option>
           <option value="3">Livestock</option>
