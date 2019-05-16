@@ -5,7 +5,7 @@ import "./Home.css";
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className='home'>
         <h1>
           {" "}
           <img src="https://i.imgur.com/5D0jGSu.png" alt="" />{" "}
@@ -18,7 +18,7 @@ class Home extends Component {
           share their products and services.
         </p>
         <footer>
-          <h3>GreenMark!t &#169; Circa: 2019</h3>
+          <h3>GreenMark!t &#169; 2019</h3>
         </footer>
       </div>
     );

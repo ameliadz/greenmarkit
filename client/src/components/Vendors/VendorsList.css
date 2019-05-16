@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+
 .vendor-list {
   width: 90%;
   margin: 0 auto;
@@ -17,4 +20,28 @@
 
 .vendor-item p {
   margin: 0;
+}
+
+.vendors h1 {
+  color: #2FA51A ;
+  text-shadow: 0.5px 2px #076D4D;
+  font-size: 45px;
+}
+
+.vendors p {
+  color: #076D4D;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 20px;
+}
+
+.vendors h2 {
+  color: #84182B;
+}
+
+.vendors button {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color:#84182B;
+  border-color: #076D4D;
 }
