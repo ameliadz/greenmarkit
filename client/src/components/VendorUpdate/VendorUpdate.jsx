@@ -12,7 +12,7 @@ class VendorUpdate extends Component {
       products: '',
       category: '',
       days: [],
-      addEntry: false,
+      addEntry: true,
       newProduct: '',
     };
 
@@ -27,11 +27,11 @@ class VendorUpdate extends Component {
 
   setProducts(data) {
     this.setState({
-      id: data.id,
-      name: data.name,
-      products: data.products,
-      category: data.category,
-      days: data.days
+      id: data.id || this.state.id,
+      name: data.name || this.state.name,
+      products: data.products || this.state.products,
+      category: data.category || this.state.category,
+      days: data.days || this.state.category
     })
   }
 
@@ -74,6 +74,8 @@ class VendorUpdate extends Component {
     e.preventDefault();
     let { name, products, category, days } = this.state;
     //updateVendor({ name, products, category, days });
+    console.log('submitted')
+    console.log(this.state)
   };
 
   deleteEntry(e) {
