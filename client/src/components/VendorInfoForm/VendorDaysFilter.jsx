@@ -4,7 +4,7 @@ class VendorDaysFilter extends Component {
   render() {
     return (
       <div className="days-filter">
-        <label htmlFor="days"><strong>Days Available</strong></label>
+        <label className="open" htmlFor="days"><strong>Days Open</strong></label>
         <div>
           <input type="checkbox" name="days" id="monday" value="1" onChange={this.props.handleDaySelect} />
           <label htmlFor="monday">Monday</label>
