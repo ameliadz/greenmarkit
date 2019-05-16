@@ -23,7 +23,7 @@ class VendorsList extends Component {
     const vendor = await deleteVendor(id);
     console.log(`deleted ${vendor.name}`);
     const { vendors } = this.state;
-    vendors.splice(vendors.indexOf(vendor));
+    vendors.splice(vendors.indexOf(vendor), 1);
     this.setState({ vendors });
     // why isn't this making the vendor list refresh :(
   }
@@ -34,7 +34,7 @@ class VendorsList extends Component {
       <div className="vendors">
         <h1>Producer List</h1>
         <div className="vendor-list">
-          {vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} />)}
+          {vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete}/>)}
         </div>
       </div>
     );
