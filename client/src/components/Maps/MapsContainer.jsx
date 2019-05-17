@@ -19,7 +19,7 @@ class MapsContainer extends Component {
             </div>
           </div>
           <div className="row-two">
-            <div className="column">
+            <div className="column">  
               <FridayMap />
             </div>
             <div className="column">

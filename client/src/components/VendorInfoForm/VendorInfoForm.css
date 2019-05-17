@@ -24,20 +24,68 @@
 
 .days-filter div {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 5px;
   padding-right: 225px;
+  justify-content: space-evenly;
 }
 
 .submit-button {
-  justify-content: center;
+  background-color: #84182B;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align:center;
+
 }
 
 .products-dropdown {
   display: flex;
-  
-  justify-content: center;
-  padding-left: 300px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 175px;
+  padding-left: 700px;
+  justify-content: space-evenly;
+
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding-right: 250px;
+}
+
+.days {
+  padding-right: 250px;
+  
+}
+
+.category {
+  padding-top: 250px;
+
+}
+
+input {
+  border: none;
+  background-color: #84182B;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 
 
