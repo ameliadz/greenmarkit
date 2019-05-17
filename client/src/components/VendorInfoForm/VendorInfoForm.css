@@ -77,5 +77,15 @@
 
 }
 
+input {
+  border: none;
+  background-color: #84182B;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 
 
