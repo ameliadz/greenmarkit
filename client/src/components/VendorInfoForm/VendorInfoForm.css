@@ -22,24 +22,35 @@
   font-size: 25px;
 }
 
-/* .days-filter div {
+.days-filter div {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 5px;
   padding-right: 225px;
-} */
-
-.submit-button {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-/* .products-dropdown {
+.submit-button {
+  background-color: #84182B;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align:center;
+
+}
+
+.products-dropdown {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 300px;
-} */
+  padding-bottom: 175px;
+  padding-left: 700px;
+  justify-content: space-evenly;
+
+}
 
 .row {
   display: flex;
@@ -53,6 +64,18 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  padding-right: 250px;
 }
+
+.days {
+  padding-right: 250px;
+  
+}
+
+.category {
+  padding-top: 250px;
+
+}
+
 
 

@@ -23,7 +23,6 @@ class VendorsList extends Component {
     const vendor = await deleteVendor(id);
     console.log(`deleted ${vendor.name}`);
     const vendors = await getVendors();
-    vendors.splice(vendors.indexOf(vendor), 1);
     this.setState({ vendors });
   }
 

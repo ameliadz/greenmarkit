@@ -3,6 +3,7 @@ import './VendorInfoForm.css'
 import VendorCategoryFilter from './VendorCategoryFilter';
 import VendorDaysFilter from './VendorDaysFilter';
 
+
 import { createVendor } from '../../services/vendorsService';
 
 class VendorInfoForm extends Component {

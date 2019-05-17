@@ -9,7 +9,7 @@ class VendorCategoryFilter extends Component {
           
           <div className="column">
             <label htmlFor="category">
-              <strong>Category</strong>
+              <strong className='category'>Category</strong>
             </label>
             <select
               name="category"

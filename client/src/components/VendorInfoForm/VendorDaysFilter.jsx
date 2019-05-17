@@ -8,7 +8,7 @@ class VendorDaysFilter extends Component {
         <div className="row">
           <div className="column">
             <label className="open" htmlFor="days">
-              <strong>Days Open</strong>
+              <strong className='days'>Days Open</strong>
             </label>
             <div>
               <input
