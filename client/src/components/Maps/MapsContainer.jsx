@@ -11,18 +11,18 @@ class MapsContainer extends Component {
       <div>
         <div className="maps-container">
           <div className="row-one">
-            <div className="column">
+            <div className="maps-column">
               <MondayMap />
             </div>
-            <div className="column">
+            <div className="maps-column">
               <WednesdayMap />
             </div>
           </div>
           <div className="row-two">
-            <div className="column">  
+            <div className="maps-column">  
               <FridayMap />
             </div>
-            <div className="column">
+            <div className="maps-column">
               <SaturdayMap />
             </div>
           </div>
