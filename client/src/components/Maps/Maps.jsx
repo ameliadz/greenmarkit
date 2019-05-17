@@ -5,7 +5,6 @@ class Maps extends Component {
   render() {
     return (
       <div>
-        <h1>Map page</h1>
         <MapsContainer />
       </div>
     );

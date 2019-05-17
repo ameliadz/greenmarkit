@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchContainer from "../SearchContainer/SearchContainer";
 import "./Home.css";
+import markitLogo from "../Home/markit-logo.png";
 
 class Home extends Component {
   render() {
@@ -8,7 +9,7 @@ class Home extends Component {
       <div className='home'>
         <h1>
           {" "}
-          <img src="https://i.imgur.com/5D0jGSu.png" alt="" />{" "}
+          <img src={markitLogo} alt="" />{" "}
         </h1>
 
         <SearchContainer />
