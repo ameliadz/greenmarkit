@@ -19,6 +19,7 @@
 .info label {
   font-family: "Fjalla One", sans-serif;
   color: #076d4d;
+  text-shadow: 0.5px 2px #e0b564;
   font-size: 25px;
 }
 
@@ -32,14 +33,13 @@
 }
 
 .submit-button {
-  background-color: #84182B;
+  background-color: #84182b;
   color: white;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  text-align:center;
-
+  text-align: center;
 }
 
 .products-dropdown {
@@ -49,7 +49,6 @@
   padding-bottom: 175px;
   padding-left: 700px;
   justify-content: space-evenly;
-
 }
 
 .row {
@@ -69,23 +68,18 @@
 
 .days {
   padding-right: 250px;
-  
 }
 
 .category {
   padding-top: 250px;
-
 }
 
 input {
   border: none;
-  background-color: #84182B;
+  background-color: #84182b;
   color: white;
   font-family: "Fjalla One", sans-serif;
   font-size: 15px;
   padding-left: 20px;
   padding-right: 20px;
 }
-
-
-

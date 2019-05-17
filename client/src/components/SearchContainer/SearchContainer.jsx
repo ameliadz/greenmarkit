@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchByProduct from "../SearchContainer/SearchByProduct";
-import SearchByVendor from "../SearchContainer/SearchByVendor"
+import SearchByVendor from "../SearchContainer/SearchByVendor";
 
 class SearchContainer extends Component {
   render() {

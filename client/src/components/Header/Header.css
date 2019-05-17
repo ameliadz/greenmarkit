@@ -3,10 +3,10 @@
 header {
   display: flex;
   justify-content: space-evenly;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
 nav {
-  background-color: #076D4D;
+  background-color: #076d4d;
   padding: 10px;
 }

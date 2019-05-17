@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class VendorItem extends Component {
   render() {
@@ -16,19 +16,18 @@ class VendorItem extends Component {
         </ul>
         <button
           type="button"
-          onClick={()=> {
-          this.props.history.replace(`/vendors/${vendor.id}/`)
-        }}>
+          onClick={() => {
+            this.props.history.replace(`/vendors/${vendor.id}/`);
+          }}
+        >
           Edit
         </button>
-        <button
-          type="button"
-          onClick={() => this.props.delete(vendor.id)}>
+        <button type="button" onClick={() => this.props.delete(vendor.id)}>
           Delete
         </button>
       </div>
     );
   }
-};
+}
 
-export default withRouter(VendorItem)
+export default withRouter(VendorItem);
