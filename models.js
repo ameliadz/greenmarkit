@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 /* Synchronize Model with Database */
-const db = new Sequelize({
+const db = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost:5432/greenmarkit_db'{
   database: 'greenmarkit_db',
   dialect: 'postgres',
   define: {
