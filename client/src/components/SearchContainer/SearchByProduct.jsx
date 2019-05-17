@@ -12,6 +12,7 @@ class SearchByProduct extends Component {
             name="search-products"
             placeholder="eggs, grains, jam"
           />
+            <input type="submit" value="Search" />
         </form>
         </div>
       </div>
