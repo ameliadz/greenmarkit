@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import './VendorInfoForm.css'
 import VendorCategoryFilter from './VendorCategoryFilter';
 import VendorDaysFilter from './VendorDaysFilter';
+import { Redirect } from 'react-router-dom';
 
-import { createVendor } from '../../services/vendorsService';
+import { createVendor, getDays } from '../../services/vendorsService';
 
 class VendorInfoForm extends Component {
   constructor() {
@@ -13,6 +14,8 @@ class VendorInfoForm extends Component {
       products: '',
       category: '',
       days: [],
+      allDays: [],
+      redirect: false
     };
 
     this.handleTextInput = this.handleTextInput.bind(this);
@@ -20,6 +23,11 @@ class VendorInfoForm extends Component {
     this.handleDaySelect = this.handleDaySelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
+
+  async componentDidMount() {
+    let allDays = await getDays();
+    this.setState({allDays})
+  }
 
   handleTextInput(e) {
     const fieldName = e.target.name;
@@ -52,13 +60,16 @@ class VendorInfoForm extends Component {
 
   async handleSubmit(e) {
     e.preventDefault();
-    let { name, products, category, days} = this.state;
-    const created = await createVendor({ name, products, category, days });
+    let { name, products, category, days } = this.state;
+    await createVendor({ name, products, category, days });
+    this.setState({redirect: true})
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/vendors" />
+    }
     return (
-
       <div className="info">
         <h1>Producer Information</h1>
         <form className="vendor-form" onSubmit={this.handleSubmit}>
@@ -72,12 +83,11 @@ class VendorInfoForm extends Component {
             <VendorCategoryFilter
               handleCategoryValue={this.handleCategoryValue} />
             <VendorDaysFilter
-              handleDaySelect={this.handleDaySelect} />
+              handleDaySelect={this.handleDaySelect} allDays={this.state.allDays} days={this.state.days} />
           </div>
           <input className="submit-button" type="submit" value="Submit" />
         </form>
       </div>
-
     );
   }
 }

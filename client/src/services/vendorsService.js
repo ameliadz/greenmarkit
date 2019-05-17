@@ -27,3 +27,8 @@ export const deleteVendor = async (id) => {
   const vendor = await axios.delete(`${BASE_URL}/vendors/${id}`);
   return vendor.data;
 }
+
+export const getDays = async () => {
+  const days = await axios.get(`${BASE_URL}/days`);
+  return days.data;
+}
