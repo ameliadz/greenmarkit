@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./VendorsList.css";
 import { getVendors, deleteVendor } from "../../services/vendorsService";
 import VendorItem from './VendorItem';
+import Filter from '../Filter/Filter';
 
 class VendorsList extends Component {
   constructor(props) {
@@ -54,6 +55,8 @@ class VendorsList extends Component {
     this.setState({ vendors });
     // why isn't this making the vendor list refresh :(
   }
+  //        <input data-type="days" type="button" value="filter by name" id="name" onClick={(e) => this.filter(e.target.dataset.type)}/>
+
 
   renderVendors(vendors) {
     return vendors.map((vendor, index) => <VendorItem vendor={vendor} key={index} delete={this.delete}/>)
@@ -63,9 +66,8 @@ class VendorsList extends Component {
     let { vendors, filteredVendors } = this.state;
     return (
       <div className="vendors">
-        <input data-type="days" type="button" value="filter by name" id="name" onClick={(e) => this.filter(e.target.dataset.type)}/>
-
-        <h1>Producer List</h1>
+        <Filter />
+        <h1>Producers</h1>
         <div className="vendor-list">
             {filteredVendors.length ? this.renderVendors(filteredVendors) : this.renderVendors(vendors)}
         </div>
