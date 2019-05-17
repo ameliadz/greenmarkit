@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
 import './VendorInfoForm.css'
 import VendorCategoryFilter from './VendorCategoryFilter';
 import VendorDaysFilter from './VendorDaysFilter';
@@ -13,6 +14,7 @@ class VendorInfoForm extends Component {
       products: '',
       category: '',
       days: [],
+      redirect: false
     };
 
     this.handleTextInput = this.handleTextInput.bind(this);
@@ -53,12 +55,15 @@ class VendorInfoForm extends Component {
   async handleSubmit(e) {
     e.preventDefault();
     let { name, products, category, days} = this.state;
-    const created = await createVendor({ name, products, category, days });
+    await createVendor({ name, products, category, days });
+    this.setState({redirect: true})
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/vendors" />
+    }
     return (
-
       <div className="info">
         <h1>Producer Information</h1>
         <form className="vendor-form" onSubmit={this.handleSubmit}>
@@ -77,7 +82,6 @@ class VendorInfoForm extends Component {
           <input className="submit-button" type="submit" value="Submit" />
         </form>
       </div>
-
     );
   }
 }
