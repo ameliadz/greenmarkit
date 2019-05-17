@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import './VendorInfoForm.css';
+import "./VendorInfoForm.css";
 
 class VendorCategoryFilter extends Component {
   render() {
     return (
       <div className="products-dropdown">
         <div className="row">
-          
           <div className="column">
             <label htmlFor="category">
-              <strong className='category'>Category</strong>
+              <strong className="category">Category</strong>
             </label>
             <select
               name="category"

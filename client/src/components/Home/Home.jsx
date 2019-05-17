@@ -6,7 +6,7 @@ import markitLogo from "../Home/markit-logo.png";
 class Home extends Component {
   render() {
     return (
-      <div className='home'>
+      <div className="home">
         <h1>
           {" "}
           <img src={markitLogo} alt="" />{" "}

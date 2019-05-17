@@ -1,0 +1,64 @@
+.edit-vendor-header h1 {
+  font-size: 35px;
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  padding: 25px;
+  padding-right: 20px;
+  text-shadow: 0.5px 2px #e0b564;
+}
+
+.edit-vendor-input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.vendor-edit-label {
+  font-size: 20px;
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  text-shadow: 0.5px 2px #e0b564;
+}
+
+.vendor-edit-category {
+  display: flex;
+  justify-content: center;
+}
+
+.vendor-edit-product {
+  display: block;
+  margin: 5px;
+}
+
+.vendor-edit-submit-button {
+  margin: 10px;
+}
+
+.vendor-edit-category {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  text-shadow: 0.5px 2px #e0b564;
+  font-size: 25px;
+}
+
+.vendor-edit-days {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  text-shadow: 0.5px 2px #e0b564;
+  font-size: 28px;
+}
+
+.enter-product {
+  font-family: "Fjalla One", sans-serif;
+  color: #076d4d;
+  text-shadow: 0.5px 2px #e0b564;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.edit-vendor-add {
+  margin: 5px;
+}
+
+body {
+  overflow-x: hidden;
+}

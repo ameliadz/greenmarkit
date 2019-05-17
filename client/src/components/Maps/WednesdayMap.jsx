@@ -22,7 +22,7 @@ class WednesdayMap extends Component {
         <div className="map-label">
           <label htmlFor="wednesday">WEDNESDAY</label>
           <figure onMouseMove={this.handleMouseMove} style={this.state}>
-          <img src={wednesdayMap} alt="wednesday map" />
+            <img src={wednesdayMap} alt="wednesday map" />
           </figure>
         </div>
       </div>

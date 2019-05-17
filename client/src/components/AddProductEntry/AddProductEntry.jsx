@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import "../VendorUpdate/VendorUpdate.css";
 
 function AddProductEntry(props) {
   if (props.addEntry === true) {
@@ -14,14 +15,14 @@ function AddProductEntry(props) {
             props.handleAdd();
           }}
         >
-          <label>Enter Product</label>
+          <label className="enter-product">Enter Product</label>
           <input
             onChange={props.handleTextInput}
             type="text"
             name="newProduct"
             value={props.state.newProduct}
           />
-          <input type="submit" value="Add" />
+          <input type="submit" value="Add" className="edit-vendor-add" />
         </form>
       </div>
     );

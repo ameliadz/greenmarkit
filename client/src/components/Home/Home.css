@@ -26,7 +26,7 @@
 }
 
 .home input {
-  background-color: #84182B;
+  background-color: #84182b;
   color: white;
   font-family: "Fjalla One", sans-serif;
   font-size: 15px;
@@ -44,12 +44,11 @@
   font-size: 35px;
   height: 50%;
   justify-content: center;
-  text-shadow:.5px 2px #e0b564;
+  text-shadow: 0.5px 2px #e0b564;
 }
 
 .home label,
 input {
-  
   justify-content: center;
 }
 
@@ -67,7 +66,7 @@ input {
   font-size: 20px;
 }
 
-.home  form {
+.home form {
   display: flex;
   justify-content: center;
   flex-direction: column;
