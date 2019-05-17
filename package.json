@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "db:init": "dropdb --if-exists greenmarkit_db && createdb greenmarkit_db",
     "db:reset": "node resetDb.js",
     "db:seed": "node seed.js",
