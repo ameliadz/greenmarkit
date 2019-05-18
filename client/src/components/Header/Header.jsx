@@ -4,8 +4,8 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <nav>
-      <header>
+    <header>
+      <nav>
         <Link
           to={"/"}
           className="nav-link"
@@ -32,8 +32,8 @@ const Header = () => {
         </Link>
         {/* Login will be a dropdown */}
         {/* <Link to={'/vendor/login'}>Login</Link> */}
-      </header>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
