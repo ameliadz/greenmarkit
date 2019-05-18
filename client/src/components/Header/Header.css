@@ -11,8 +11,8 @@ nav {
   padding: 10px;
 }
 
-a {
-  text-decoration: "none";
-  color: "#E0B564";
-  font-size: "18px";
+.nav-link {
+  text-decoration: none;
+  color: #E0B564;
+  font-size: 18px;
 }
