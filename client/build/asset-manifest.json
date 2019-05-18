@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2d7e0f9a.chunk.css",
+    "main.js": "/static/js/main.63211652.chunk.js",
+    "main.js.map": "/static/js/main.63211652.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.fd9c6dda.chunk.js": "/static/js/2.fd9c6dda.chunk.js",
+    "static/js/2.fd9c6dda.chunk.js.map": "/static/js/2.fd9c6dda.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f932d2049cf44575d65c06cb00627c7c.js": "/precache-manifest.f932d2049cf44575d65c06cb00627c7c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2d7e0f9a.chunk.css.map": "/static/css/main.2d7e0f9a.chunk.css.map",
+    "static/media/friday-map.png": "/static/media/friday-map.2bb0e578.png",
+    "static/media/markit-logo.png": "/static/media/markit-logo.60dbb420.png",
+    "static/media/monday-map.png": "/static/media/monday-map.ec1c46ea.png",
+    "static/media/saturday-map.png": "/static/media/saturday-map.deb76256.png",
+    "static/media/wednesday-map.png": "/static/media/wednesday-map.386e8f86.png"
+  }
+}
