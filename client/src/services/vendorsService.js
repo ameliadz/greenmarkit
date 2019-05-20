@@ -18,7 +18,6 @@ export const createVendor = async (data) => {
 };
 
 export const updateVendor = async (data) => {
-  console.log(data)
   const vendor = await axios.put(`${BASE_URL}/vendors/${data.id}`, data);
   return vendor.data.vendor;
 };

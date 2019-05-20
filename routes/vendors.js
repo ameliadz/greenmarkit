@@ -7,7 +7,6 @@ const vendorRouter = Router();
 // create new vendor
 vendorRouter.post('/', async (request, response, next) => {
   try {
-    console.log(request.body);
     const vendor = await Vendor.create({
       name: request.body.name,
       products: request.body.products,
@@ -86,10 +85,8 @@ vendorRouter.put('/:id/products', async (request, response, next) => {
     vendor.update({
       products: `${vendor.products}, ${newProducts}` || vendor.products,
     });
-    console.log(vendor);
     response.json({ vendor });
   } catch (e) {
-    console.log(e);
     next(e);
   }
 });

@@ -19,9 +19,7 @@ class VendorsList extends Component {
   }
 
   async delete(id) {
-    console.log(id);
     const vendor = await deleteVendor(id);
-    console.log(`deleted ${vendor.name}`);
     const vendors = await getVendors();
     this.setState({ vendors });
   }
